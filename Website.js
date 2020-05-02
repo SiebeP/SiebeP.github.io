@@ -6,7 +6,7 @@ function myFunction()
 function GoToHomePage()
 {
   alert("Werkt")
-  window.location = 'Home.html';
+  window.location = '/';
 }
 
 function GoToEindwerk()
