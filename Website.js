@@ -1,12 +1,7 @@
-function myFunction() 
-{
-  alert("test");
-}
-
 function GoToHomePage()
 {
   alert("Werkt")
-  window.location = '/';
+  window.location = 'Home.html';
 }
 
 function GoToEindwerk()
