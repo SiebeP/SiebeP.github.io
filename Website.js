@@ -7,5 +7,5 @@ function GoToHomePage()
 function GoToEindwerk()
 {
   alert("werkt ook")
-  window.location = 'https://github.com/SiebeP/SiebeP.github.io/blob/master/Eindwerk.html';
+  window.location = "https://github.com/SiebeP/SiebeP.github.io/blob/master/Eindwerk.html";
 }
