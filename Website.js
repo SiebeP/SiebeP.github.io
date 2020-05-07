@@ -7,5 +7,5 @@ function GoToHomePage()
 function GoToEindwerk()
 {
   alert("werkt ook")
-  window.location = 'Eindwerk.html';
+  window.open("https://www.youraddress.com","_self")';
 }
