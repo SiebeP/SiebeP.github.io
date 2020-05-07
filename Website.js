@@ -7,5 +7,5 @@ function GoToHomePage()
 function GoToEindwerk()
 {
   alert("werkt ook")
-  window.open("https://www.youraddress.com","_self")';
+  window.open("https://github.com/SiebeP/SiebeP.github.io/blob/master/Eindwerk.html","_self")';
 }
