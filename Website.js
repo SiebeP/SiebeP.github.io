@@ -1,7 +1,7 @@
 function GoToHomePage()
 {
   alert("Werkt")
-  window.location = 'index.html';
+  window.location = 'default.aspx'';
 }
 
 function GoToEindwerk()
