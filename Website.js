@@ -1,13 +1,19 @@
-function GoToHomePage()
+function GoToHome()
 {
-  alert("Werkt")
-    window.location = 'default.aspx';
+  alert("home werkt")
+    window.location = 'index.html';
 }
 
 function GoToEindwerk()
 {
-  alert("werkt ook")
+  alert("eindwerk werkt")
     window.location = 'Eindwerk.html';
+}
+
+function GoToContact()
+{
+  alert("contact werkt")
+   window.location= 'contact.html';
 }
 
 function myFunction() {

@@ -83,3 +83,5 @@
 h1 { color: steelblue; text-align: center;}
 h2 { color: red; text-align: center;}
 p { color: red; }
+.link { color: blue; text-decoration: none; }
+.link:hover { color: purple; {text-decoration: none; }
