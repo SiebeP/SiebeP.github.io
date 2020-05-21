@@ -2,20 +2,7 @@
  <html lang="nl-NL">
   <head>
    <title>Website Siebe</title>
-   <link rel="stylesheet" style="text/css" href="stylesheet.css">
-   <style>
-     body {
-     padding: 25px;
-     background-color: white;
-     color: black;
-     font-size: 25px;
-    }
-
-   .dark-mode {
-    background-color: black;
-    color: white;
-    }
-   </style>
+   <link rel="stylesheet" style="text/css" href="darkstylesheet.css">
   </head>
   <body>
    <h1>Website Siebe</h1>
@@ -28,6 +15,8 @@
     <a href="#news">News</a>
     <a href="#contact" onclick="javascript:GoToContact()">Contact</a>
     <script src="Website.js"></script>
+    <a style="float:right" href="#Dark" onclick="javascript:DarkMode()">Donkere modus</a>
+    <script src="Website.js"></script>
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
      <i class="fa fa-bars"></i>
     </a>
@@ -37,7 +26,5 @@
     <div class="bar"></div>
    </div>
    <br>
-   <button onclick="myFunction2()">Toggle dark mode</button>
-   <script src="Website.js"></script>
   </body>
  </html>
