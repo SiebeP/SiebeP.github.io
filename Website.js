@@ -1,19 +1,16 @@
 function GoToHome()
 {
-  alert("home werkt")
     window.location = 'index.html';
 }
 
 function GoToEindwerk()
 {
-  alert("eindwerk werkt")
     window.location = 'Eindwerk.html';
 }
 
 function GoToContact()
 {
-  alert("contact werkt")
-   window.location= 'contact.html';
+    window.location= 'contact.html';
 }
 
 function myFunction() {
