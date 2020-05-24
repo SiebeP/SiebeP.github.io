@@ -8,6 +8,11 @@ function GoToEindwerk()
     window.location = 'Eindwerk.html';
 }
 
+function GoToNews()
+{
+    window.location= 'news.html';
+}
+
 function GoToContact()
 {
     window.location= 'contact.html';
