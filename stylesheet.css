@@ -49,12 +49,12 @@ body {
 }
 .links li a {
  text-decoration: none;
- color: #FFFFFF;
+ color: #000000;
  letter-spacing: -0.5px;
 }
 .links li a:hover,
 .links li a.active {
- color: #000000;
+ color: #FFFFFF;
 }
 
 .sections {
