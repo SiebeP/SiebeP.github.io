@@ -2,23 +2,23 @@ h1#een { color: black; text-align: center;}
 h1#twee { color: white; text-align: center;}
 
 h2#een { color: black; }
-h2#twee { color: white; }
+h2#twee { color: black; }
 h2#drie { color: red; text-align: center;}
 
 h3#een { color: black; }
-h3#twee { color: white; }
+h3#twee { color: black; }
 
 h4#een { color: black; }
-h4#twee { color: white; }
+h4#twee { color: black; }
 
 h5#een { color: black; }
-h5#twee { color: white; }
+h5#twee { color: black; }
 
 h6#een { color: black; }
-h6#twee { color: white; }
+h6#twee { color: black; }
 
 p#een { color: black; }
-p#twee { color: white; }
+p#twee { color: black; }
 
 
 /*Navbar*/
