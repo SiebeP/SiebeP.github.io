@@ -19,6 +19,15 @@
   will-change: background-posisiton;
  }
 
+@keyframes slide {
+ from {
+  background-position-x: 0;
+ }
+ to {
+  background-position-x: 113px;
+ }
+}
+
 /*Topnav*/
 
 /* Add a black background color to the top navigation */
