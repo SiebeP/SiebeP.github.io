@@ -1,45 +1,41 @@
 <!doctype html>
- <html lang="nl-NL">
+ <html>
   <head>
    <title>Website Siebe</title>
    <link rel="stylesheet" style="text/css" href="stylesheet.css">
-   <script src="https://kit.fontawesome.com/6b5af3c12e.js" crossorigin="anonymous"></script>
-   <style>
-     body {                      /*for darkmode*/
-     padding: 25px;
-     background-color: white;
-     color: black;
-     font-size: 25px;
-    }
-
-   .dark-mode {
-    background-color: black;
-    color: white;
-    }
-   </style>
   </head>
   <body>
-   <h1 id="title">Website Siebe</h1>
-   <div class="topnav" id="myTopnav">
-    <a class="active" href="#home" onclick="javascript:GoToHome()">Home</a>
-    <script src="Website.js"></script>
-    </script>
-    <a href="#eindwerk" onclick="javascript:GoToEindwerk()">Eindwerk</a>
-    <script src="Website.js"></script>
-    <a href="#news" onclick="javascript:GoToNews()">News</a>
-    <script src="Website.js"></script>
-    <a href="#contact" onclick="javascript:GoToContact()">Contact</a>
-    <script src="Website.js"></script>
-    <a style="float:right" href="#Dark" onclick="javascript:DarkMode()">Donkere modus</a>
-    <script src="Website.js"></script>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-     <i class="fas fa-bars"></i>
-    </a>
+   <nav class="navbar">
+    <div class="links-wrapper">
+     <ul class="links">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#eindwerk">Eindwerk</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#contact">Contact</a></li>
+     </ul>
+    </div>
+   </nav>
+   <div class="sections">
+    <section id="home">
+     <h1 id="een">Home</h1>
+     <h2 id="een">test</h2>
+     <h2 id="drie">Er wordt aan deze website gewerkt.</h2>
+     <br>
+     <div class="container">
+      <div class="bar"></div>
+     </div>
+    </section>
+    <section id="eindwerk">
+     <h1 id="twee">Eindwerk</h1>
+     <h2 id="twee">test</h2>
+    </section>
+    <section id="news">
+     <h1 id="een">News</h1>
+    </section>
+    <section id="contact">
+     <h1 id="twee">Contact</h1>
+    </section>
    </div>
-   <h2>Er wordt aan deze website gewerkt.</h2>
-   <div class="container">
-    <div class="bar"></div>
-   </div>
-   <br>
+   <script src="test.js"></script>
   </body>
  </html>
