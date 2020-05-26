@@ -1,13 +1,13 @@
 h1#een { color: black; text-align: center;}
 h1#twee { color: black; text-align: center;}
-h1#title { color: steelblue; text-align: center;}
+h1#title { color: steelblue; text-align: right;}
 
 h2#een { color: black; text-align: center; }
 h2#twee { color: black; text-align: center; }
-h2#drie { color: red; text-align: center;}
 
 h3#een { color: black; }
 h3#twee { color: black; }
+h3#drie { color: red; text-align: center;}
 
 h4#een { color: black; }
 h4#twee { color: black; }
