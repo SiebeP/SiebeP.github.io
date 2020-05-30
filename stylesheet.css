@@ -20,7 +20,7 @@ p { color: black; margin-left: 10px; }
 li { color: black; margin-left: 20px; }
 
 /*Classes*/
-.tussentitel { color: red; margin-left: 10px; }
+.tussentitel { color: #e20000; margin-left: 10px; }
 .tussentitel2 { color: white; margin-left: 10px; }
 .link { text-decoration: none; margin-left: 10px; }
 .link:hover {color: purple; text-decoration: none; }
