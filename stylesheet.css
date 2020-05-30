@@ -8,7 +8,6 @@ h2#work { color: red; text-align: center; margin-left: 10px; }
 
 h3 { color: black; margin-left: 10px; }
 h3#een { color: red; text-align: center; margin-left: 10px; }
-.tussentitel { color: red; margin-left: 10px; }
 
 h4 { color: black; margin-left: 10px; }
 
@@ -20,8 +19,12 @@ p { color: black; margin-left: 10px; }
 
 li { color: black; margin-left: 20px; }
 
+/*Classes*/
+.tussentitel { color: red; margin-left: 10px; }
+.tussentitel2 { color: white; margin-left: 10px; }
 .link { text-decoration: none; margin-left: 10px; }
 .link:hover {color: purple; text-decoration: none; }
+.h1wit { color: white; text-align: center; margin-left: 10px; }
 
 /*Er wordt aan de webite gewerkt:*/
 
