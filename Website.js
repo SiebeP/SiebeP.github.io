@@ -4,6 +4,7 @@ const sectionPos = {};
 sectionsArray.forEach((section) => {
  sectionPos[section.id] = section.offsetTop;
 });
+
 window.onscroll = () => {
  var scrollPosition =
   document.documentElement.scrollTop || document.body.scrollTop;
@@ -14,3 +15,4 @@ window.onscroll = () => {
   }
  }
 };
+

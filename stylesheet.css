@@ -14,6 +14,7 @@ p { color: black; margin-left: 10px; }
 
 li { color: black; margin-left: 20px; }
 
+a#benodigdheden { padding-top: 40px;}
 /*Classes*/
 .tussentitel { color: #e20000; margin-left: 10px; }
 .tussentitel2 { color: #a20000; margin-left: 10px; }
@@ -107,4 +108,17 @@ section:nth-child(even) {
 .logo {
  color: red;
  text-align: center;
+}
+
+/*Tabel*/
+table {
+  border: 1px solid black;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  text-align: left;
+  padding: 8px;
 }
