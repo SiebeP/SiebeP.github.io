@@ -17,7 +17,7 @@ li { color: black; margin-left: 20px; }
 /*Classes*/
 .tussentitel { color: #FF0000; margin-left: 10px; }
 .tussentitel2 { color: #a20000; margin-left: 10px; }
-.link { text-decoration: none; margin-left: 10px; }
+.link { text-decoration: none; }
 .link:hover {color: purple; text-decoration: none; }
 .Titel { color: steelblue; text-align: center; margin-left: 10px; }
 .Titel2 { color: White; text-align: center; margin-left: 10px; }
@@ -121,4 +121,3 @@ td, th {
   text-align: left;
   padding: 8px;
 }
-
