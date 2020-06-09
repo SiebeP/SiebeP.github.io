@@ -12,7 +12,7 @@ h3#een { color: red; text-align: center; }
 .link { text-decoration: none; }
 .link:hover {color: purple; text-decoration: none; }
 .Titel { color: steelblue; text-align: center; }
-.Titel2 { color: #FFFFFF; text-align: center; }
+.Titel2 { color: #4800e9; text-align: center; }
 .Wit { color: #FFFFFF; }
 
 
@@ -119,7 +119,6 @@ section {
 }
 section:nth-child(even) {
  background: #B0C4DE;
- color: #FFFFFF;
 }
 
 /*To Top knop*/
