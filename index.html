@@ -3,70 +3,57 @@
   <head>
    <title>Website Siebe</title>
    <link rel="stylesheet" style="text/css" href="stylesheet.css">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta name="description" content="Ik geef op deze website meer uitleg over Domoticz en hoe je dit moet gebruiken. Hier kan u ook uitleg vinden over hoe je domoticz moet klaarzetten.">
+   <script src="https://kit.fontawesome.com/6b5af3c12e.js" crossorigin="anonymous"></script>
   </head>
   <body>
-   <nav class="navbar">
-    <div class="links-wrapper">
-     <ul class="links">
-      <li><a href="#home" class="active">Home</a></li>
-      <li><a href="#eindwerk">Eindwerk</a></li>
-      <li><a href="#handleiding">Handleiding Domoticz</a></li>
-      <li><a href="#news">News</a></li>
-      <li><a href="#contact">Contact</a></li>
-     </ul>
+   <h1 id="Titel">Website Siebe</h1>
+   <div class="topnav" id="myTopnav">
+    <a class="active" href="#home">Home</a>
+    <a href="#eindwerk">Eindwerk</a>
+    <a href="#handleiding">Handleiding Domoticz</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+     <i class="fas fa-bars"></i>
+    </a>
     </div>
-   </nav>
-   <br>
-   <div class="sections">
-    <section id="home">
-     <h1 class="Titel">Home</h1>
-     <h2 id="work">Er wordt aan deze website gewerkt.</h2>
-     <br>
-     <div class="container">
-      <div class="bar"></div>
-     </div>
-     <br>
-     <p>Welkom op mijn website ik ben Siebe ik zit in het 5e TSO Elektrische installatietechnieken. Deze website heb ik gemaakt om mijn eindwerk uit te leggen op een speciale manier. Voor meer info over mijn eindwerk kan u naar het daal “Eindwerk” gaan.</p>
-    </section>
-    <section id="eindwerk">
-     <h1 class="Titel2">Eindwerk</h1>
-     <h2 class="tussentitel2">We moeten dit jaar een eindwerk maken. de opdracht is als volgt:</h2> 
-     <p>Maak een domotica systeem met het door de leerkracht gegeven domotica platform. Stel alles in zodat je een stabiel platform krijgt leg uit via foto’s of filmpjes hoe je dat doet.</p>
-     <p>Zorg ervoor dat je via een drukknop 1 lamp aan en met de zelfde drukknop de lamp terug uit kan zetten.</p>
-     <p>Kijk ook om een lamp te dimmen met 1 drukknop.</p>
-     <p>Kijk om ook een sfeer te creëren b.v. sfeer TV kijken dan dimt de lamp vanzelf tot 30% dan schakelt de tv in en gaan de rolluiken naar beneden met 1 bediening.</p>
-     <p>Kijk of je systeem ook kan werken met google home. (er is een google home beschikbaar).</p>
-     <br>
-     <h2 class="tussentitel2">Opdracht:</h2>
-     <ul>
-      <li>Maak een stabiel platform waarop je de opdracht kan maken.</li>
-      <li>Maak een bestelbon op met de prijs en foto’s erbij van welke componenten die je nodig hebt om dit pro-ject te realiseren.</li>
-      <li>Beschrijf stap voor stap hoe je alle stappen heb gedaan maak telkens als je bezig bent foto’s en print screen of filmpjes.</li>
-      <li>Plaats de gemaakte print screen of foto’s in een word document plaats er ook tekst bij met uitleg wat je juist gedaan hebt en waarom. Je kan ook als je wil een film maken of website hoe je alles heb gedaan.</li>
-      <li>Kijk om sferen te creëren via een bediening meerder actoren aansturen.</li>
-      <li>Kijk of het mogelijk is om je systeem te laten werken met een google home.</li>
-     </ul>
-     <br>
-     <p>Ik moet deze opdracht met domoticz maken. Dit is een open source domotica systeem. Domoticz werkt met een server. Dit wil zeggen dat je een apparaat nodig hebt dat altijd aanligt. Hiervoor heb ik een raspberry pi van school gekregen.</p>
-    </section>
-    <section id="handleiding">
-     <h1 class="Titel">Handleiding Domoticz</h1>
-     <br>
-     <table style="width:20%">
-      <tr>
-       <th style="text-align: center;">Inleiding</th>
-      </tr>
-      <tr>
-       <th><a class="link" href="#benodigdheden" title="Jump to: benodigdheden">Benodigdheden</a></th>
-      </tr>
-      <tr>
-       <th><a class="link" href="#klaarzetten">Hoe klaarzetten?</a></th>
-      </tr>
-     </table>
-     <br>
-      <a id="benodigdheden"><h2 class="tussentitel">Benodigdheden:</h2></a>
+    <div class="sections">
+     <section id="home">
+      <h1 class="Titel">Home</h1>
+      <h2 id="work">Er wordt aan deze website gewerkt.</h2>
+      <br>
+      <div class="container">
+       <div class="bar"></div>
+      </div>
+      <br>
+      <p>Welkom op mijn website ik ben Siebe ik zit in het 5e TSO Elektrische installatietechnieken. Deze website heb ik gemaakt om mijn eindwerk uit te leggen op een speciale manier. Voor meer info over mijn eindwerk kan u naar het daal “Eindwerk” gaan.</p>
+     </section>
+     <section id="eindwerk">
+      <h1 class="Titel2">Eindwerk</h1>
+      <h2 class="tussentitel2">We moeten dit jaar een eindwerk maken. de opdracht is als volgt:</h2> 
+      <p>Maak een domotica systeem met het door de leerkracht gegeven domotica platform. Stel alles in zodat je een stabiel platform krijgt leg uit via foto’s of filmpjes hoe je dat doet.</p>
+      <p>Zorg ervoor dat je via een drukknop 1 lamp aan en met de zelfde drukknop de lamp terug uit kan zetten.</p>
+      <p>Kijk ook om een lamp te dimmen met 1 drukknop.</p>
+      <p>Kijk om ook een sfeer te creëren b.v. sfeer TV kijken dan dimt de lamp vanzelf tot 30% dan schakelt de tv in en gaan de rolluiken naar beneden met 1 bediening.</p>
+      <p>Kijk of je systeem ook kan werken met google home. (er is een google home beschikbaar).</p>
+      <br>
+      <h2 class="tussentitel2">Opdracht:</h2>
+      <ul>
+       <li>Maak een stabiel platform waarop je de opdracht kan maken.</li>
+       <li>Maak een bestelbon op met de prijs en foto’s erbij van welke componenten die je nodig hebt om dit pro-ject te realiseren.</li>
+       <li>Beschrijf stap voor stap hoe je alle stappen heb gedaan maak telkens als je bezig bent foto’s en print screen of filmpjes.</li>
+       <li>Plaats de gemaakte print screen of foto’s in een word document plaats er ook tekst bij met uitleg wat je juist gedaan hebt en waarom. Je kan ook als je wil een film maken of website hoe je alles heb gedaan.</li>
+       <li>Kijk om sferen te creëren via een bediening meerder actoren aansturen.</li>
+       <li>Kijk of het mogelijk is om je systeem te laten werken met een google home.</li>
+      </ul>
+      <br>
+      <p>Ik moet deze opdracht met domoticz maken. Dit is een open source domotica systeem. Domoticz werkt met een server. Dit wil zeggen dat je een apparaat nodig hebt dat altijd aanligt. Hiervoor heb ik een raspberry pi van school gekregen.</p>
+     </section>
+     <section id="handleiding">
+      <h1 class="Titel">Handleiding Domoticz</h1>
+      <p>Hieronder staat een handleiding over hoe je domoticz moet klaarzetten en gebruiken.</p>
+      <br>
+      <h2 class="tussentitel">Benodigdheden:</h2>
       <ul>
        <li>Een raspberry pi</li>
        <li>Een PC of laptop</li>
@@ -74,22 +61,23 @@
        <li>Een voeding voor je raspberry pi</li>
       </ul>
       <br>
-     <img src="Raspberrypi.jpg" alt="raspberrypi" style="width: 20%; float:right;">
-     <h2 class="tussentitel">Raspberry pi?</h2>
-     <p>Voor domoticz kan je elke versie van de raspberry pi gebruiken, ik zou aanraden om een pi 3 of 4 te gebruiken omdat deze sneller zijn dan hun voorlopers.</p>
-     <br>
-     <a id="klaarzetten"><h2 class="tussentitel">Hoe klaarzetten?</h2></a>
-     <p>Voordat je kan starten met je lampen,… te configureren zal je een Domoticz server moeten maken. Daarvoor heeft u de raspberry pi voor, deze zal als server gebruikt worden. U kan dit ook met een PC of een server zelf doen maar een raspberry pi neemt niet zoveel plaats in.</p>
-    </section>
-    <section id="news">
-     <h1 class="Titel2">News</h1>
-    </section>
-    <section id="contact">
-     <h1 class="Titel">Contact</h1>
-     <p>Als u vragen geeft of u vind een fout in mijn website gelieve mij te contacteren. Hoe beter u de fout uitlegt(mag met een screenshot), hoe beter ik kan helpen.<p>
-     <a class="link" href="mailto: siebepauwels.school@gmail.com">Zend mail</a>
-    </section>
-   </div>
-   <script src="Website.js"></script>
-  </body>
- </html>
+      <h2 class="tussentitel">Raspberry pi?</h2>
+      <p>Voor domoticz kan je elke versie van de raspberry pi gebruiken, ik zou aanraden om een pi 3 of 4 te gebruiken omdat deze sneller zijn dan hun voorlopers.</p>
+      <br>
+      <h2 class="tussentitel">Hoe klaarzetten?</h2>
+      <p>Voordat je kan starten met je lampen,… te configureren zal je een Domoticz server moeten maken. Niet panikeren want Domoticz maakt de server voor jou. Daarvoor heeft u de raspberry pi voor, deze zal als server gebruikt worden. U kan dit ook met een PC of een server zelf doen maar een raspberry pi neemt niet zoveel plaats in.</p>
+     </section>
+     <section id="news">
+      <h1 class="Titel2">News</h1>
+     </section>
+     <section id="contact">
+      <h1 class="Titel">Contact</h1>
+      <p>Als u vragen geeft of u vind een fout in mijn website gelieve mij te contacteren. Hoe beter u de fout uitlegt(mag met een screenshot), hoe beter ik kan helpen.<p>
+      <a class="link" href="mailto: siebepauwels.school@gmail.com">Zend mail</a>
+     </section>
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <script src="Website.js"></script>
+   </body>
+  </html>
+ 
