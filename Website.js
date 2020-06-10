@@ -18,6 +18,7 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
+//fas-Fa-bars
 function fasFa() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
@@ -26,3 +27,21 @@ function fasFa() {
     x.className = "topnav";
   }
 }
+
+const sectionsArray = document.querySelectorAll('section');
+const sectionPos = {};
+
+sectionsArray.forEach((section) => {
+ sectionPos[section.id] = section.offsetTop;
+});
+
+window.onscroll = () => {
+ var scrollPosition =
+  document.documentElement.scrollTop || document.body.scrollTop;
+ for (id in sectionPos) {
+  if (sectionPos[id] <= scrollPosition) {
+   document.querySelector('.active').classList.remove('active');
+   document.querySelector(`a[href*=${id}]`).classList.add('active');
+  }
+ }
+};
