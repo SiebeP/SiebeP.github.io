@@ -110,7 +110,7 @@ h3#een { color: red; text-align: center; }
 /*Secties*/
 
 .sections {
- padding-top: 10px;
+ padding-top: 0px;
 }
 section {
  min-height: 100vh;
