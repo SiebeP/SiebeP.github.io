@@ -107,14 +107,16 @@ h3#een { color: red; text-align: center; }
   }
 }
 
+/*Secties*/
+
 .sections {
  padding-top: 0px;
 }
 section {
- height: 100vh;
+ min-height: 100vh;
  background: #FFFFFF;
  padding-right: 30px;
- padding-top: 10px;
+ padding-top: 40px;
  color: #000;
 }
 section:nth-child(even) {
