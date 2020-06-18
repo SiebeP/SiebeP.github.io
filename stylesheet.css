@@ -1,11 +1,3 @@
-h1#Titel { color: blue; text-align: center; }
-
-h2 { color: white; }
-h2#work { color: red; text-align: center; }
-
-h3#een { color: red; text-align: center; }
-
-
 /*Classes*/
 .tussentitel { color: #e20000; }
 .tussentitel2 { color: #a20000; }
@@ -144,4 +136,21 @@ section:nth-child(even) {
 
 #myBtn:hover {
   background-color: #555; /* Add a dark-grey background on hover */
+}
+
+/*Tabel*/
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 0px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #B0C4DE;
 }

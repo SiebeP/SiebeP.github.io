@@ -62,13 +62,49 @@
        <li>Een SD kaart</li>
        <li>Een voeding voor je raspberry pi</li>
       </ul>
-      <br>
-      <h2 class="tussentitel">Raspberry pi?</h2>
-      <img src="Raspberrypi.jpg" alt="raspberrypi" style="width: 20%; float:right;">
+      <h3 style="color: blue;">Raspberry pi?</h3>
+      <img src="Raspberrypi.jpg" alt="raspberrypi" style="width: 20%; hight: 20%; float:right;">
       <p>Voor domoticz kan je elke versie van de raspberry pi gebruiken, ik zou aanraden om een pi 3 of 4 te gebruiken omdat deze sneller zijn dan hun voorlopers.</p>
-      <br>
-      <h2 class="tussentitel">Hoe klaarzetten?</h2>
+      <h2 class="tussentitel">1.Hoe klaarzetten?</h2>
       <p>Voordat je kan starten met je lampen,… te configureren zal je een Domoticz server moeten maken. Niet panikeren want Domoticz maakt de server voor jou. Daarvoor heeft u de raspberry pi voor, deze zal als server gebruikt worden. U kan dit ook met een PC of een server zelf doen maar een raspberry pi neemt niet zoveel plaats in.</p>
+      <ol>
+       <li><a href="#OS download" style="color: black; text-decoration: none;">OS Download</a></li>
+       <li><a href="#Connecteren" style="color: black; text-decoration: none;">Hoe connecteren?</a></li>
+      </ol>
+      <h3 style="color: blue;" id="OS download">Hoe OS downloaden?</h3>
+      <p>Je zal moeten je OS (Operating System) op de SD kaart zetten want de raspberry pi heeft geen intern geheugen dit wil zeggen dat hij alles zal opslaan op de SD kaart. Ik zal dit doen via <a href="https://www.raspberrypi.org/downloads/" target="_blank">Raspberry pi imager</a>, je kan dit ook met een flasher als <a href="https://www.balena.io/etcher/" target="_blank">balena etcher</a> doen maar hierbij moet je eerst zelf de <a href="https://www.raspberrypi.org/downloads/" target="_blank">OS downloaden</a> en dan flashen naar de SD kaart.<p>
+      <h3 style="color: blue;">raspberry pi imager uitleg:</h3>
+      <p>Als je de app opent krijg je volgend scherm:</p>
+      <img src="Raspberrypiimager1.jpg" alt="Raspberrypiimager1" style="width: 30%; hight: 30%;">
+      <p>Voor de OS te kiezen moet u op CHOOSE OS duwen.</p>
+      <img src="OS1.jpg" alt="OS kiezer1" style="width: 30%; hight: 30%;">
+      <p>U krijgt dan een pop-up met alle opties. U kan zien dat er 2 Raspberry pi opties zijn en dan heeft u ook nog LibreElec en Ubuntu, wij gaan Raspberry Pi OS kiezen.</p>
+      <img src="OS2.jpg" alt="OS kiezer2" style="width: 30%; hight: 30%;">
+      <p>De eerste versie is de gewone 32-bit versie van raspberry pi, vroeger heette dit Raspbian. Bij deze versie staat recomended omdat dit de meest voorkomende versie is want deze heeft alles dat je nodig hebt.</p>
+      <img src="OS3.jpg" alt="OS kiezer3" style="width: 30%; hight: 30%;">
+      <p>Bij raspberry Pi OS (other) zal u de lite en de full versie vinden.</p>
+      <img src="OS4.jpg" alt="OS kiezer4" style="width: 30%; hight: 30%;">
+      </br>
+      <img src="OS5.jpg" alt="OS kiezer5" style="width: 30%; hight: 30%;">
+      <p>De lite versie heeft geen scherm functie, dit wil zeggen dat als je een scherm aan de HDMI-poort(en) zal hangen dat dit niet zal werken (dit is wel bij full en gewone versie). Bij de lite versie is er ook geen GUI (Graphical User Interface of grafische gebruikersomgeving) dit wil zeggen dat je alles via de command line naar de pi zal moeten sturen. De full versie heeft de gewone versie maar met extra software voor te programmeren. Ik zal de standaard versie gebruiken omdat ik de pi dan aan een tv/scherm kan hangen als er iets niet klopt en ik heb de extra applicaties niet nodig (stel dat u deze later nodig heeft kan u ze nog steeds installeren).</p>
+      </br>
+      <p>Als u uw software heeft gekozen hoeft u enkel nog uw SD kaart te kiezen en op Write te klikken.</p>
+      <img src="OS6.jpg" alt="OS kiezer6" style="width: 30%; hight: 30%">
+      <p>Na een goede 25 minuten is het gedaan, u zal het volgende op uw scherm zien.</p>
+      <img src="OS7.jpg" alt="OS kiezer6" style="width: 30%; hight: 30%">
+      <h3 style="color: blue;" id="Connecteren">2.Hoe connecteren?</h3>
+      <p>Omdat ik de raspberry pi headless (zonder scherm, muis,…) zal gebruiken zal ik moeten ermee kunnen connecteren. Ik zal eerst connecteren via SSH (Secure Shell), dan kan ik VNC inschakelen. Met VNC zie je alles wat je op je scherm zou zien op je laptop, je kan dan de raspberry pi gebruiken zonder dat je erbij moet zitten.</p>
+      <p>Voordat je SSH kan gebruiken heeft je pi internetverbinding nodig. U kan de pi via kabel verbinden, hierbij moet u enkel uw kabel in uw router, accespoint,… Steken. Als u de pi met wifi wil verbinden kan u uitleg hieronder vinden. Als u de pi met kabel verbind kan u dit gewoon <a href="#SSH">overslaan.</a></p>
+      <p>Voor u de SD kaart kan uithalen moet u uw wifi nog instellen. Hiervoor zal u de naam en het paswoord van uw internet weten. Het wachtwoord kan je op de router vinden, moest u geen toegang hebben tot uw router kan u alsnog het paswoord weten. Ik zal enkel uitleggen hoe u dit op Windows moet doen, er zijn natuurlijk ook manieren om dit te zien op linux en macOS. Als u uw wachtwoord weet kan u <a href="#SSH">hier</a> door naar het volgende deel.</p>
+      <p>Ik zal zo uitgebreid mogelijk uitleggen hoe u uw wifi paswoord kan zien. Het eerste dat u moet doen is CMD of opdrachtprompt openen.</p>
+      <img src="CMD1.jpg" alt="CMD1" style="width: 30%; hight: 30%;">
+      <p>Dan moet u ‘netsh wlan show profiles’ typen. Dit geeft alle wifi netwerken dat je computer kent weer. De netsh command is voor te zeggen tegen de computer wat je wilt, hier is dit dus in de categorie internet. Netsh is de network shell dus we zitten in de categorie internet. Wlan staat voor wireless local area network of draadloos lokaal netwerk. Dit is om duidelijk e maken aan de pc dat hij iets met zijn wlan zal moeten doen. Show profiles is toon profielen, hierbij kan u alle internetnamen zien.</p>
+      <img src="CMD2.jpg" alt="CMD2" style="width: 50%; hight: 50%;">
+      <p>U kan zien dat er maar 3 netwerken opkomen bij mij. Ik weet zeker dat het niet Campus Tant ten MSKA Personeel is omdat dit netwerken van op school zijn. Proximus-Home-8810 daartegen is het netwerk van bij mij thuis.</p>
+      <p>Nu het leuke deel. Het paswoord is zeer gemakkelijk te vinden, u moet enkel netsh wlan show profiles “uw internet naam” key=clear. Dit is dezelfde command als daarjuist met key=clear en uw internet naam erbij. Wat dit zal doen is de key of sleutel tonen. Deze key is het paswoord van het internet. U hoeft enkel achter de key te zoeken.</p>
+      <img src="CMD3.jpg" alt="CMD3" style="width: 30%; hight: 30%;">
+      <p id="SSH">SSH is voor veiligheidsredenen standaard af bij Raspbian omdat je pi kan overgenomen worden door hackers moest dit aan liggen. Het is heel simpel om SSH aan te leggen, je moet gewoon een leeg kladblok document genaamd ssh op je SD kaart zetten.</p>
+      <img src="SSH1.jpg" alt="SSH1" style>
      </section>
      <section id="news">
       <h1 class="Titel2">News</h1>
@@ -83,4 +119,3 @@
     <script src="Website.js"></script>
    </body>
   </html>
- 
