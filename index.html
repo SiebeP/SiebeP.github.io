@@ -73,8 +73,7 @@
       </ol>
       <h3 style="color: blue;" id="OS download">Hoe OS downloaden?</h3>
       <p>Je zal moeten je OS (Operating System) op de SD kaart zetten want de raspberry pi heeft geen intern geheugen dit wil zeggen dat hij alles zal opslaan op de SD kaart. Ik zal dit doen via <a href="https://www.raspberrypi.org/downloads/" target="_blank">Raspberry pi imager</a>, je kan dit ook met een flasher als <a href="https://www.balena.io/etcher/" target="_blank">balena etcher</a> doen maar hierbij moet je eerst zelf de <a href="https://www.raspberrypi.org/downloads/" target="_blank">OS downloaden</a> en dan flashen naar de SD kaart.<p>
-      <h3 style="color: blue;">raspberry pi imager uitleg:</h3>
-      <p>Als je de app opent krijg je volgend scherm:</p>
+      <p>Als je de Raspberry Pi imager app opent krijg je volgend scherm:</p>
       <img src="Raspberrypiimager1.jpg" alt="Raspberrypiimager1" style="width: 30%; hight: 30%;">
       <p>Voor de OS te kiezen moet u op CHOOSE OS duwen.</p>
       <img src="OS1.jpg" alt="OS kiezer1" style="width: 30%; hight: 30%;">
@@ -93,7 +92,7 @@
       <p>Na een goede 25 minuten is het gedaan, u zal het volgende op uw scherm zien.</p>
       <img src="OS7.jpg" alt="OS kiezer6" style="width: 30%; hight: 30%">
       <h3 style="color: blue;" id="Connecteren">2.Hoe connecteren?</h3>
-      <p>Omdat ik de raspberry pi headless (zonder scherm, muis,…) zal gebruiken zal ik moeten ermee kunnen connecteren. Ik zal eerst connecteren via SSH (Secure Shell), dan kan ik VNC inschakelen. Met VNC zie je alles wat je op je scherm zou zien op je laptop, je kan dan de raspberry pi gebruiken zonder dat je erbij moet zitten.</p>
+      <p>Omdat ik de raspberry pi headless (zonder scherm, muis,…) zal gebruiken zal ik moeten ermee kunnen connecteren. Wilt u de pi wel gebruiken met een scherm? <a href="#Screen">Hier</a> leg ik uit hoe u dit moet doen. Ik zal eerst connecteren via SSH (Secure Shell), dan kan ik VNC inschakelen. Met VNC zie je alles wat je op je scherm zou zien op je laptop, je kan dan de raspberry pi gebruiken zonder dat je erbij moet zitten.</p>
       <p>Voordat je SSH kan gebruiken heeft je pi internetverbinding nodig. U kan de pi via kabel verbinden, hierbij moet u enkel uw kabel in uw router, accespoint,… Steken. Als u de pi met wifi wil verbinden kan u uitleg hieronder vinden. Als u de pi met kabel verbind kan u dit gewoon <a href="#SSH">overslaan.</a></p>
       <p>Voor u de SD kaart kan uithalen moet u uw wifi nog instellen. Hiervoor zal u de naam en het paswoord van uw internet weten. Het wachtwoord kan je op de router vinden, moest u geen toegang hebben tot uw router kan u alsnog het paswoord weten. Ik zal enkel uitleggen hoe u dit op Windows moet doen, er zijn natuurlijk ook manieren om dit te zien op linux en macOS. Als u uw wachtwoord weet kan u <a href="#SSH">hier</a> door naar het volgende deel.</p>
       <p>Ik zal zo uitgebreid mogelijk uitleggen hoe u uw wifi paswoord kan zien. Het eerste dat u moet doen is CMD of opdrachtprompt openen.</p>
@@ -103,8 +102,104 @@
       <p>U kan zien dat er maar 3 netwerken opkomen bij mij. Ik weet zeker dat het niet Campus Tant ten MSKA Personeel is omdat dit netwerken van op school zijn. Proximus-Home-8810 daartegen is het netwerk van bij mij thuis.</p>
       <p>Nu het leuke deel. Het paswoord is zeer gemakkelijk te vinden, u moet enkel netsh wlan show profiles “uw internet naam” key=clear. Dit is dezelfde command als daarjuist met key=clear en uw internet naam erbij. Wat dit zal doen is de key of sleutel tonen. Deze key is het paswoord van het internet. U hoeft enkel achter de key te zoeken.</p>
       <img src="CMD3.JPG" alt="CMD3" style="width: 30%; hight: 30%;">
+      <p>Voor wat heeft u uw paswoord van uw wifi nu nodig? We gaan een wpa supplicant maken. Dit document zegt tegen de pi wat de naam en het paswoord van uw internet is.</p>
+      <p>Het document zal er uit zien als volgende: bij country moet u de 2-delige ISO 3166-1 land code geven. Dit toont aan in welk land u woont. <a href="https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes" target="_blank">Hier</a> kan u een tabel vinden moest u niet in België wonen.</p>
+      <img src="WPA1.jpg" alt="WPA1" style="width: 30%; hight: 30%;">
+      <p>Hieronder staat de tekst zodat u deze kan kopiëren. Let er wel op dat u uw wifi naam, paswoord en landcode moet aanpassen.</p>
+      <pre>
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+country=&lt;BE&gt;
+
+network={
+ssid="&lt;Naam wifi&gt;"
+psk="&lt;paswoord wifi&gt;"
+}</pre>
+      <p>Dit document moet u opslaan als wpa_supplicant.conf let wel op dat u het document opslaat onder alle bestanden en niet als tekstdocument.</p>
+      <img src="WPA2.jpg" alt="wpa2" style="width: 30%; hight: 30%;">
       <p id="SSH">Bij Raspbian is SSH standaard uit omdat dit een manier is van hackers om uw pi over te nemen. Het is heel simpel om SSH aan te leggen, je moet gewoon een leeg kladblok document genaamd ssh op je SD kaart zetten.</p>
-      <img src="SSH1.jpg" alt="SSH1" style>
+      <img src="SSH1.jpg" alt="SSH1" style="width: 30%; hight: 30%;">
+      <p>Nu kan u de SD kaart uit uw pc halen en in de Raspberry pi steken. Als u de pi in de voeding steekt zal u zien dat hij opstart. In het begin zal u enkel het rode lampje zien branden, het groene zal dan beginnen pinken. Het groene lampje toont aan dat de pi de SD kaart aan het lezen is, dit is ook een teken dat de pi kan schrijven op de SD kaart.</p>
+      <Nadat de pi is opgestart kan u deze zoeken in uw internet. De gemakkelijkste manier is om de ping command te gebruiken (windows bij macOS en linux zal dit anders zijn). Ping is uw pc dat in uw netwerk zoekt achter het IP-adres of de naam dat u ingeeft. U kan ook naar uw router instellingen gaan en de pi zo zoeken. Als u ping raspberrypi.local typt in cmd dan zou u normaal moeten een antwoord krijgen.</p>
+      <img src="ping1.jpg" alt="ping1" style="width: 40%; hight: 40%;">
+      <p>U kan zien dat ik een antwoord krijg van 169.254.121.83. Dit is het IP-adres van de pi. Moest ping raspberrypi.local niet werken kan u ping raspberrypi gebruiken, let wel op want als uw buur of iemand in uw straat dan een pi heeft dat deze ook in de lijst zal staan.</p>
+      <p>Nu dat we het IP-adres weten kunnen we connecteren via SSH. Hiervoor hebben we een app nodig dat SSH verbindingen kan maken. Ik zal <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html" target="_blank">putty</a> gebruiken omdat dit de meest aangeraden app is.</p>
+      <p>Het enige dat u moet doen is het IP-adres in putty ingeven en op open drukken. Let er wel op dat de optie op SSH staat.</p>
+      <img src="Putty1.jpg" alt="putty1" style="width: 30%; hight: 30%">
+      <p>Het IP-adres moet u in de balk vanboven ingeven, port staat standaard op 22. Dit kan u laten op 22 staan.</p>
+      <img src="Putty2.jpg" alt="putty2" style="width: 30%; hight: 30%;">
+      <p>Als u nu op open drukt zal putty verbinding maken met de pi.</p>
+      <img src="Putty3.jpg" alt="putty3" style="width: 30%; hight: 30%;">
+      <p>De eerste keer dat u verbind met de pi zal u een pop-up hebben van putty met een security alert. Dit is omdat de pi een verse OS heeft en de key niet juist is. Putty vraagt of hij deze mag veranderen. U hoeft gewoon op ja te duwen en dan kan u doorgaan. Maar als dit nog eens gebeuren zonder dat u dit heeft veranderd wil dit zeggen dat uw pi gehackt is.</p>
+      <img src="putty4.jpg" alt="putty4" style="width: 30%; hight: 30%;">
+      <p>Als u connectie maakt met putty zal hij “login as:” tonen. De standaard user is pi. Dan moet u enter duwen.</p>
+      <img src="Putty5.jpg" alt="putty5" style="width: 30%; hight: 30%">
+      <p>Putty vraagt nu het paswoord. Het standaard paswoord is “raspberry”.</p>
+      <img src="Putty6.jpg" alt="putty6" style="width: 30%; hight: 30%">
+      <p>Nu hebben we connectie met de pi. We zullen nu kijken voor het beeld van de pi te kunnen zien. Dit zullen we doen via VNC. Dit zal u eerst moeten aanleggen op de pi. Hiervoor zal u <a href="https://www.realvnc.com/en/connect/download/viewer/" target="_blank">VNC viewer</a> nodig hebben, dit is om de pi te kunnen zien. Je hebt ook VNC server, dit is voor het apparaat dat overgenomen moet worden.</p>
+      <p>De eerste stap dat we gaan doen is naar de instellingen gaan van de pi. We doen dit door sudo raspi-config te typen. Sudo staat voor als root dus als administrator, dit geeft u speciale functies dat u niet kan zonder sudo.</p>
+      <img src="Putty7.jpg" alt="putty7" style="width: 30%; hight: 30%;">
+      <p>U zal dan volgend scherm krijgen:</p>
+      <img src="Putty8.jpg" alt="putty8" style="width: 30%; hight: 30%;">
+      <p>Voor VNC aan te leggen zullen we naar interfacing options gaan. Dit zijn alle verbindingstechnieken.</p>
+      <img src="Putty9.jpg" alt="putty9" style="width: 30%; hight: 30%;">
+      <p>Hierin gaan we op VNC duwen. VNC is een grafische verbinding.</p>
+      <img src="Putty10.jpg" alt="putty10" style="width: 30%; hight: 30%;">
+      <p>Als de pi vraagt of u VNC wilt inschakelen moet u op yes duwen anders zal hij dit niet aanleggen.</p>
+      <img src="Putty11.jpg" alt="putty11" style="width: 30%; hight: 30%">
+      <p>Als alles goed is gegaan krijgt u volgend scherm:</p>
+      <img src="Putty12.jpg" alt="putty12" style="width: 30%; hight: 30%">
+      <p>Om de interfacing options weg te krijgen moet u rechts vanonder naar finish gaan.</p>
+      <img src="Putty13.jpg" alt="putty13" style="width: 30%; hight: 30%">
+      <p>Het volgende dat u moet doen is naar VNC viewer gaan. Om met de pi te kunnen connecteren moet u in de balk vanboven de pi zijn IP-adres ingeven.</p>
+      <img src="VNC1.jpg" src="VNC1" style="width: 30%; hight: 30%;">
+      <p>Als dit de eerste keer is dat u via VNC connecteert met de pi zal u volgend bericht krijgen. U moet op continue duwen en dan kan u door naar de volgende stap.</p>
+      <img src="VNC2.jpg" src="VNC2" style="width: 30%; hight: 30%;">
+      <p>Nu worden de username en paswoord gevraagd. Omdat we dit nog niet hebben veranderd is dit nog steeds “pi” met paswoord “raspberry”.</p>
+      <img src="VNC3.jpg" alt="VNC3" style="width: 30%; hight: 30%;">
+      <p id="Screen">De eerste keer dat u de pi opstart krijgt u volgend scherm. Dit is om de pi in te stellen aan uw voorkeuren.</p>
+      <img src="Pi1.jpg" alt="Pi1" style="width: 30%; hight: 30%;">
+      <p>Het eerste dat u zal moeten instellen is uw land, taal en tijdzone. Als u uw land kiest past de pi direct de taal en tijdzone aan.</p>
+      <img src="Pi2.jpg" alt="Pi2" style="width: 30%; hight: 30%;">
+      <p>Het volgende dat u moet instellen is het wachtwoord voor de pi. Dit zal ook het wachtwoord worden voor Putty en VNC als u de pi headless gebruikt.</p>
+      <img src="Pi3.jpg" alt="Pi3" style="width: 30%; hight: 30%;">
+      <p>Dan moet u uw scherm configureren. Als u geen zwarte boord ziet rond u scherm kan u op next duwen. Heeft u wel een zwarte boord dan is het best dat u eerst het vakje aankruist voor u op next drukt.</p>
+      <img src="Pi4.jpg" alt="Pi4" style="width: 30%; hight: 30%;">
+      <p>Hierna vraagt de pi om te verbinden met een draadloos netwerk. Als u niet met wifi wilt verbinden kan u op skip duwen. Wilt u echter wel met een netwerk verbinden kies dan de naam van het netwerk en druk op next.</p>
+      <img src="Pi5.jpg" alt="Pi5" style="width: 30%; hight: 30%;">
+      <p>Het volgende is de pi updaten. U kan kiezen om dit over te slaan maar het is aangeraden dat u dit doet. Als de pi klaar is met updaten zal hij opnieuw opstarten.</p>
+      <img src="Pi6.jpg" alt="Pi6" style="width: 30%; hight: 30%">
+      <p>Domoticz downloaden kan op 2 manieren. Ik zal de gemakkelijkste manier uitleggen, de andere manier staat uitgelegd in <a href="https://www.domoticz.com/wiki/Build_Domoticz_from_source" target=_blank">deze</a> wiki.</p>
+      <p>De manier waarop ik het zal doen is in de terminal  “curl -L https://install.domoticz.com | bash” te typen.</p>
+      <p>Stap 1: open de terminal. Het pictogram is een zwart kotje met een blauwe balk vanboven met &gt;_ erop.</p>
+      <img src="Pi7.jpg" alt="Pi7" style="width: 30%; hight: 30%;">
+      <p>Stap2: typ curl -L https://install.domoticz.com | bash in de terminal. Hierdoor weet de pi dat hij domoticz moet instaleren.</p>
+      <img src="Pi8.jpg" alt="Pi8" style="width: 30%; hight: 30%;">
+      <p>Als alles goed gaat krijgt u volgend scherm.</p>
+      <img src="Pi9.jpg" alt="Pi9" style="width: 30%; hight: 30%;">
+      <p>Als u goed oplet ziet u dat er staat dat je een statisch IP-adres nodig hebt. Dit wil zeggen dat je IP-adres niet vanzelf kan veranderen. Dit ga ik later uitleggen hoe je dit moet doen.</p>
+      <img src="Pi10.jpg" alt="Pi10" style="width: 30%; hight: 30%;">
+      <p>De pi vraagt welke services je wilt gebruiken. Je kan kiezen tussen http en https. http is de gewone browser en https is de safe browser. Er is geen verschil tussen beiden op zicht maar de 2e is veiliger.</p>
+      <img src="Pi11.jpg" alt="Pi11" style="width: 30%; hight: 30%;">
+      <p>Dan kan u kiezen welke poort u wilt gebruiken voor http en https. Het is best dat u dit op de standaardwaarde laat staan.</p>
+      <img src="PN1.jpg" alt="PN1" style="width: 30%; hight: 30%;">
+      <img src="PN2.jpg" alt="PN2" style="width: 30%; hight: 30%;">
+      <p>Dan kan u kiezen in welke folder u domoticz wilt instaleren.</p>
+      <img src="Domoticz1.jpg" alt="Domoticz1" style="width: 30%; hight: 30%;">
+      <p>Wanneer domoticz klaar is met installeren krijgt u een scherm met 2 adressen op. Dit zijn de adressen dat u in uw browser moet typen om uw server te bereiken.</p>
+      <img src="Domoticz2.jpg" alt="Domoticz2" style="width: 30%; hight: 30%;">
+      <p>Als we nu naar deze adressen willen gaan kan u zien op de http kan u op uw server maar op https werkt niet. Dit is omdat u eerst een SSL certificaat moet geven aan uw domoticz server. Ik zal niet uitleggen hoe u dit moet doen omdat ik geen SSL certificaat heb. Wilt u wel een https server hebben dan staat op <a href="https://www.domoticz.com/wiki/Native_secure_access_with_Lets_Encrypt" target="_blank">deze</a> pagina meer uitleg hierover.</p>
+      <img src="Domoticz3.jpg" alt="Domoticz3" style="width: 30%; hight: 30%;">
+      <p>Vooraleer we doorgaan zal ik uitleggen hoe je een statisch IP-adres aan u pi moet geven.</p>
+      <p>De eerste stap is een backup van uw huidig netwerk maken. We doen dit door:” sudo cp /etc/dhcpcd.conf /etc/dhcpcd.conf.backup” in de terminal te typen.</p>
+      <img src="SIP1.jpg" alt="Statisch IP1" style="width: 30%; hight: 30%">
+      <p>Dan gaan we het bestand dat uw IP opslaat veranderen. We doen dit door “sudo nano /etc/dhcpcd.conf” in de terminal te typen.</p>
+      <pre>Je krijgt dan een hele lijst. U zal vanonder moeten 
+interface eth0
+ static ip_address=IP dat je aan pi wil geven/24
+ static routers=Routers subnetmask
+ static domain_name_servers=8.8.8.8
+bijtypen.</pre>
      </section>
      <section id="news">
       <h1 class="Titel2">News</h1>
