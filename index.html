@@ -3,7 +3,7 @@
   <head>
    <title>Website Siebe</title>
    <link rel="stylesheet" style="text/css" href="stylesheet.css">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="viewport" content="width=device-width, initial-scale=2.0">
    <meta name="description" content="Ik geef op deze website meer uitleg over Domoticz en hoe je dit moet gebruiken. Hier kan u ook uitleg vinden over hoe je domoticz moet klaarzetten.">
    <script src="https://kit.fontawesome.com/6b5af3c12e.js" crossorigin="anonymous"></script>
   </head>
@@ -120,7 +120,7 @@ psk="&lt;paswoord wifi&gt;"
       <p id="SSH">Bij Raspbian is SSH standaard uit omdat dit een manier is van hackers om uw pi over te nemen. Het is heel simpel om SSH aan te leggen, je moet gewoon een leeg kladblok document genaamd ssh op je SD kaart zetten.</p>
       <img src="SSH1.jpg" alt="SSH1" style="width: 30%; hight: 30%;">
       <p>Nu kan u de SD kaart uit uw pc halen en in de Raspberry pi steken. Als u de pi in de voeding steekt zal u zien dat hij opstart. In het begin zal u enkel het rode lampje zien branden, het groene zal dan beginnen pinken. Het groene lampje toont aan dat de pi de SD kaart aan het lezen is, dit is ook een teken dat de pi kan schrijven op de SD kaart.</p>
-      <Nadat de pi is opgestart kan u deze zoeken in uw internet. De gemakkelijkste manier is om de ping command te gebruiken (windows bij macOS en linux zal dit anders zijn). Ping is uw pc dat in uw netwerk zoekt achter het IP-adres of de naam dat u ingeeft. U kan ook naar uw router instellingen gaan en de pi zo zoeken. Als u ping raspberrypi.local typt in cmd dan zou u normaal moeten een antwoord krijgen.</p>
+      <p>Nadat de pi is opgestart kan u deze zoeken in uw internet. De gemakkelijkste manier is om de ping command te gebruiken (windows bij macOS en linux zal dit anders zijn). Ping is uw pc dat in uw netwerk zoekt achter het IP-adres of de naam dat u ingeeft. U kan ook naar uw router instellingen gaan en de pi zo zoeken. Als u ping raspberrypi.local typt in cmd dan zou u normaal moeten een antwoord krijgen.</p>
       <img src="ping1.jpg" alt="ping1" style="width: 40%; hight: 40%;">
       <p>U kan zien dat ik een antwoord krijg van 169.254.121.83. Dit is het IP-adres van de pi. Moest ping raspberrypi.local niet werken kan u ping raspberrypi gebruiken, let wel op want als uw buur of iemand in uw straat dan een pi heeft dat deze ook in de lijst zal staan.</p>
       <p>Nu dat we het IP-adres weten kunnen we connecteren via SSH. Hiervoor hebben we een app nodig dat SSH verbindingen kan maken. Ik zal <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html" target="_blank">putty</a> gebruiken omdat dit de meest aangeraden app is.</p>
@@ -131,7 +131,7 @@ psk="&lt;paswoord wifi&gt;"
       <p>Als u nu op open drukt zal putty verbinding maken met de pi.</p>
       <img src="Putty3.jpg" alt="putty3" style="width: 30%; hight: 30%;">
       <p>De eerste keer dat u verbind met de pi zal u een pop-up hebben van putty met een security alert. Dit is omdat de pi een verse OS heeft en de key niet juist is. Putty vraagt of hij deze mag veranderen. U hoeft gewoon op ja te duwen en dan kan u doorgaan. Maar als dit nog eens gebeuren zonder dat u dit heeft veranderd wil dit zeggen dat uw pi gehackt is.</p>
-      <img src="putty4.jpg" alt="putty4" style="width: 30%; hight: 30%;">
+      <img src="Putty4.jpg" alt="putty4" style="width: 30%; hight: 30%;">
       <p>Als u connectie maakt met putty zal hij “login as:” tonen. De standaard user is pi. Dan moet u enter duwen.</p>
       <img src="Putty5.jpg" alt="putty5" style="width: 30%; hight: 30%">
       <p>Putty vraagt nu het paswoord. Het standaard paswoord is “raspberry”.</p>
@@ -194,12 +194,34 @@ psk="&lt;paswoord wifi&gt;"
       <p>De eerste stap is een backup van uw huidig netwerk maken. We doen dit door:” sudo cp /etc/dhcpcd.conf /etc/dhcpcd.conf.backup” in de terminal te typen.</p>
       <img src="SIP1.jpg" alt="Statisch IP1" style="width: 30%; hight: 30%">
       <p>Dan gaan we het bestand dat uw IP opslaat veranderen. We doen dit door “sudo nano /etc/dhcpcd.conf” in de terminal te typen.</p>
-      <pre>Je krijgt dan een hele lijst. U zal vanonder moeten 
+      <p>Je krijgt dan een hele lijst. U zal vanonder moeten</p>
+      <pre>
 interface eth0
  static ip_address=IP dat je aan pi wil geven/24
  static routers=Routers subnetmask
  static domain_name_servers=8.8.8.8
-bijtypen.</pre>
+      </pre>
+      <p>bijtypen.</p>
+      <p>Naast interface ziet u eth0 staan, u moet dit aanpassen aan het soort internet dat u gebruikt. Als u de pi met kabel hebt verbonden moet u eth0 typen, maar als u de pi met wifi verbind moet u wlan0 typen.</p>
+      <img src="SIP2.jpg" alt="StaticIP2" style="width: 30%; hight: 30%;">
+      <p>Het statisch IP-adres kan u zelf kiezen. Daarachter moet u / met het subnet mask van je netwerk typen. Is uw subnet mask 255.255.255.0 dan moet u /24 invullen. Is uw subnet mask ruimer bv: 255.255.0.0 gebruik dan /16 en voor 255.0.0.0 moet u /8 gebruiken.</p>
+      <p>Het subnet mask kan u vinden in cmd (bij windows macOS en linux zullen anders zijn). Het eerste dat u moet doen is cmd of opdrachtprompt openen, dan moet u ipconfig typen.</p>
+      <img src="SIP3.jpg" alt="StaticIP3" style="width: 30%; hight: 30%;">
+       <p>U kan uw subnet mask onder subnet mask vinden. U moet cmd nog niet sluiten want we gaan dit later nog nodig hebben.</p>
+      <img src="SIP4.jpg" alt="StaticIP4" style="width: 30%; hight: 30%;">
+      <p>Naast static routers moet u het IP-adres van uw router intypen. Dit is de Default Gateway. Dit staat onder uw subnet mask in cmd.</p>
+      <img src="SIP5.jpg" alt="StaticIP5" style="width: 30%; hight: 30%;">
+      <p>U kan zien dat ik 2 adressen krijg. Ik ga 192.168.1.1 gebruiken omdat dit simpeler is.</p>
+      <p>Bij static domain_name_servers kan u 8.8.8.8 laten staan u kan dit adres ook aanpassen naar de DNS server van je provider, 8.8.8.8 is de gratis DNS server van Google.</p>
+      <p>Dan slaan we het bestand op, we doen dit met ctrl x, dan moet u kiezen tussen ja en nee. We willen het opslaan dus we typen j. en dan drukt u op enter om het op te slaan.</p>
+      <p>De wijzigingen zijn nog niet actief tot je de pi heropstart. Je kan dit via de terminal doen of via het menu. Via de terminal moet u “sudo reboot -h 0” typen.</p>
+      <img src="Reboot1.jpg" alt="Reboot1" style="width: 30%; hight: 30%;">
+      <p>Om het menu te openen moet u op het besje links vanboven klikken.</p>
+      <img src="Reboot2.jpg" alt="Reboot2" style="width: 30%; hight: 30%;">
+      <p>Helemaal vanonder zal u een optie Schutdown zien staan. Als u hierop klikt kan u kiezen voor opnieuw op te starten.</p>
+      <img src="Reboot3.jpg" alt="Reboot3" style="width: 30%; hight: 30%">
+      <p>Dan moet u op reboot duwen voor de pi te laten heropstarten.</p>
+      <img src="Reboot4.jpg" alt="Reboot4" style="width: 30%; hight: 30%;">
      </section>
      <section id="news">
       <h1 class="Titel2">News</h1>
