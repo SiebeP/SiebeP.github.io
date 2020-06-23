@@ -105,7 +105,7 @@
       <p>Voordat je SSH kan gebruiken heeft je pi internetverbinding nodig. U kan de pi via kabel verbinden, hierbij moet u enkel uw kabel in uw router, accespoint,… Steken. Als u de pi met wifi wil verbinden kan u uitleg hieronder vinden. Als u de pi met kabel verbind kan u dit gewoon <a href="#SSH">overslaan.</a></p>
       <p>Voor u de SD kaart kan uithalen moet u uw wifi nog instellen. Hiervoor zal u de naam en het paswoord van uw internet weten. Het wachtwoord kan je op de router vinden, moest u geen toegang hebben tot uw router kan u alsnog het paswoord weten. Ik zal enkel uitleggen hoe u dit op Windows moet doen, er zijn natuurlijk ook manieren om dit te zien op linux en macOS. Als u uw wachtwoord weet kan u <a href="#SSH">hier</a> door naar het volgende deel.</p>
       <p>Ik zal zo uitgebreid mogelijk uitleggen hoe u uw wifi paswoord kan zien. Het eerste dat u moet doen is CMD of opdrachtprompt openen.</p>
-      <img src="CMD1.JPG" alt="CMD1" style="width: 30%; hight: 30%;">
+      <img src="CMD1.jpg" alt="CMD1" style="width: 30%; hight: 30%;">
       <p>Dan moet u ‘netsh wlan show profiles’ typen. Dit geeft alle wifi netwerken dat je computer kent weer. De netsh command is voor te zeggen tegen de computer wat je wilt, hier is dit dus in de categorie internet. Netsh is de network shell dus we zitten in de categorie internet. Wlan staat voor wireless local area network of draadloos lokaal netwerk. Dit is om duidelijk e maken aan de pc dat hij iets met zijn wlan zal moeten doen. Show profiles is toon profielen, hierbij kan u alle internetnamen zien.</p>
       <img src="CMD2.jpg" alt="CMD2" style="width: 50%; hight: 50%;">
       <p>U kan zien dat er maar 3 netwerken opkomen bij mij. Ik weet zeker dat het niet Campus Tant ten MSKA Personeel is omdat dit netwerken van op school zijn. Proximus-Home-8810 daartegen is het netwerk van bij mij thuis.</p>
@@ -161,9 +161,9 @@ psk="&lt;paswoord wifi&gt;"
       <p>Om de interfacing options weg te krijgen moet u rechts vanonder naar finish gaan.</p>
       <img src="Putty13.jpg" alt="putty13" style="width: 30%; hight: 30%">
       <p>Het volgende dat u moet doen is naar VNC viewer gaan. Om met de pi te kunnen connecteren moet u in de balk vanboven de pi zijn IP-adres ingeven.</p>
-      <img src="VNC1.jpg" src="VNC1" style="width: 30%; hight: 30%;">
+      <img src="VNC1.jpg" alt="Vnc1" src="VNC1" style="width: 30%; hight: 30%;">
       <p>Als dit de eerste keer is dat u via VNC connecteert met de pi zal u volgend bericht krijgen. U moet op continue duwen en dan kan u door naar de volgende stap.</p>
-      <img src="VNC2.jpg" src="VNC2" style="width: 30%; hight: 30%;">
+      <img src="VNC2.jpg" alt="VNC2" style="width: 30%; hight: 30%;">
       <p>Nu worden de username en paswoord gevraagd. Omdat we dit nog niet hebben veranderd is dit nog steeds “pi” met paswoord “raspberry”.</p>
       <img src="VNC3.jpg" alt="VNC3" style="width: 30%; hight: 30%;">
       <p id="Screen">De eerste keer dat u de pi opstart krijgt u volgend scherm. Dit is om de pi in te stellen aan uw voorkeuren.</p>
@@ -219,7 +219,7 @@ interface eth0
        <p>U kan uw subnet mask onder subnet mask vinden. U moet cmd nog niet sluiten want we gaan dit later nog nodig hebben.</p>
       <img src="SIP4.jpg" alt="StaticIP4" style="width: 30%; hight: 30%;">
       <p>Naast static routers moet u het IP-adres van uw router intypen. Dit is de Default Gateway. Dit staat onder uw subnet mask in cmd.</p>
-      <img src="SIP5.jpg" alt="StaticIP5" style="width: 30%; hight: 30%;">
+      <img src="SIP5.JPG" alt="StaticIP5" style="width: 30%; hight: 30%;">
       <p>U kan zien dat ik 2 adressen krijg. Ik ga 192.168.1.1 gebruiken omdat dit simpeler is.</p>
       <p>Bij static domain_name_servers kan u 8.8.8.8 laten staan u kan dit adres ook aanpassen naar de DNS server van je provider, 8.8.8.8 is de gratis DNS server van Google.</p>
       <p>Dan slaan we het bestand op, we doen dit met ctrl x, dan moet u kiezen tussen ja en nee. We willen het opslaan dus we typen j. en dan drukt u op enter om het op te slaan.</p>
@@ -248,7 +248,7 @@ interface eth0
       <p>Eerst gaan we naar switches moeten gaan. Op dit blad zal je alle shakelaars en sensoren zien dat je hebt geconfigureerd, hier kan u ook nieuwe schakelaars,lampen,… configureren.</p>
       <img src="Lamp1.jpg" alt="Lamp1" style="width: 40%; hight: 40%;">
       <p>U kan zien dat er 2 opties zijn: Manuel light/switch en learn light/switch. Als u een smart lamp, schakelaar,… hebt dat werkt met domoticz kan u op learn drukken, domoticz zal dan automatisch zoeken achter uw schakelaar, lamp. Wilt u alles zelf configureren dan kan u op manuel drukken.</p>
-      <img src="Lamp2.jpg" alt:"Lamp2" style="width: 40%; hight: 40%;">
+      <img src="Lamp2.jpg" alt="Lamp2" style="width: 40%; hight: 40%;">
       <p>Als u op manueel drukt zal u volgende pop-up krijgen</p>
       <img src="Lamp3.jpg" alt="Lamp3" style="width: 30%; hight: 30%">
       <p>U kan zien dat de hardware al automatisch op Virtueel staat, dit is omdat we nog geen andere hardware hebben staan.</p>
