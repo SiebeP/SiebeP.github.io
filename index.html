@@ -50,6 +50,7 @@
       </ul>
       <br>
       <p>Ik moet deze opdracht met domoticz maken. Dit is een open source domotica systeem. Domoticz werkt met een server. Dit wil zeggen dat je een apparaat nodig hebt dat altijd aanligt. Hiervoor heb ik een raspberry pi van school gekregen.</p>
+      <a href="http://192.168.1.31:8080/#/Dashboard" target="_blank">Link Eindwerk server</a>
      </section>
      <section id="handleiding">
       <h1 class="Titel">Handleiding Domoticz</h1>
@@ -252,7 +253,7 @@ interface eth0
       <img src="Lamp7.jpg" alt="Lamp7" style="width: 30%; hight: 30%;">
       <p>Voor te testen of de lamp goed is geconfigureerd kan u op test drukken.</p>
       <img src="Lamp8.jpg" alt="Lamp8" style="width: 30%; hight: 30%;">
-      <p>U kan ook kiezen of het apparaat een main device of een slave device is. U kan dit gebruiken om bv een wissel of kruisschakeling te maken met drukknoppen. Ik zal dit later tonen hoe dit moet.</p>
+      <p>U kan ook kiezen of het apparaat een main device of een slave device is. U kan dit gebruiken om bv een wissel of kruisschakeling te maken met drukknoppen.</p>
       <img src="Lamp9.jpg" alt="Lamp9" style="width: 30%; hight: 30%;">
       <p>Voor de schakelaar toe te voegen moet u enkel  op Add device drukken.</p>
       <img src="Lamp10.jpg" alt="Lamp10" style="width: 30%; hight: 30%;">
@@ -264,6 +265,84 @@ interface eth0
       <img src="Fav2.jpg" alt="fav2" style="width: 30%; hight: 30%;">
       <p>U kan nu zien dat de lamp op het dashboard staat.</p>
       <img src="Fav3.jpg" alt="Fav3" style="width: 30%; hight: 30%;">
+      <p>Er is nog een manier om virtuele lampen toe te voegen. Als u naar hardware gaat kan u create virtual sensors kiezen.</p>
+      <img src="VS1.jpg" alt="Virtuele Sensor1" style="width: 40%; hight: 40%;">
+      <p>Dan krijgt u volgende pop-up:</p>
+      <img src="VS2.jpg" alt="Virtuele Sensor2" style="width: 30%; hight: 30%;">
+      <p>De naam kan u zelf kiezen. Sensor type is het type sensor, bv: RGB, Schakelaar,… U kan de lamp,.. toevoegen door op ok te duwen. Als u naar het deel switches gaat zal u uw schakelaar zien staan.</p>
+      <img src="VS3.jpg" alt="Virtuele Sensor3" style="width: 30%; hight: 30%;">
+      <p>Voor we doorgaan zal ik tonen hoe je een grondplan in domoticz zet. Vooraleer we beginnen zal je een grondplan nodig hebben. Ik heb volgende gekozen omdat dit niet te groot en niet te klein is voor mijn eindwerk.</p>
+      <img src="Grondplan1.jpg" alt="Grondplan1" style="width: 30%; hight: 30%;">
+      <p>Dan moet u naar setup gaan.</p>
+      <img src="Grondplan2.jpg" alt="Grondplan2" style="width: 30%; hight: 30%;">
+      <p>Als u naar het deel more options gaat dan zal u plans zien staan.</p>
+      <img src="Grondplan3.jpg" alt="Grondplan3" style="width: 30%; hight: 30%">
+      </br>
+      <img src="Grondplan4.jpg" alt="Grondplan4" style="width: 20%; hight: 20%">
+      <p>Als u op plans drukt kan u 3 opties zien staan:  Roomplan, Floorplan en timerplan. Roomplan is voor iedere kamer appart in te delen, Floorplan is voor iedere vloer van het huis bv gelijkvloers, 2e verdiep, kalder,… timerplan is voor al u timers op een plan te zetten. Wij zullen eerst een vloerplan toevoegen en dan zal ik iedere kamer indelen, het timerplan zal ik momenteel nog niet nodig hebben.</p>
+      <img src="Grondplan5.jpg" alt="Grondplan5" style="width: 20%; hight: 20%">
+      <p>Voor het plan toe te voegen moet u op add drukken.</p>
+      <img src="Grondplan6.jpg" alt="Grondplan6" style="width: 30%; hight: 30%;">
+      <p>U zal dan volgende pop-up krijgen:</p>
+      <img src="Grondplan7.jpg" alt="Grondplan7" style="width: 30%; hight: 30%;">
+      <p>De naam van het grondplan is de naam dat u wilt dat naast het grondplan staat op uw scherm, app.</p>
+      <img src="Grondplan8.jpg" alt="Grondplan8" style="width: 30%; hight: 30%;">
+      <p>Icon scale is om de schaal van de iconen te veranderen, ik zal dit op 1.0 laten. Moesten de iconen te groot zijn tegenover uw plan kan u dat hier veranderen.</p>
+      <img src="Grondplan9.jpg" alt="Grondplan9" style="width: 30%; hight: 30%;">
+      <p>Om het plan toe te voegen moet u op bestand kiezen duwen.</p>
+      <img src="Grondplan10.jpg" alt="Grondplan10" style="width: 30%; hight: 30%">
+      <p>Om het definitief te maken moet u op add drukken.</p>
+      <img src="Grondplan11.jpg" alt="Grondplan11" style="width: 30%; hight: 30%">
+      <p>U kan nu zien dat het grondplan is toegevoegd aan de lijst.</p>
+      <img src="Grondplan12.jpg" alt="Grondplan12" style="width: 30%; hight: 30%">
+      <p>Een roomplan toevoegen is even simpel. Voor te beginnen moet u naar setup gaan.</p>
+      <img src="Grondplan2.jpg" alt="Grondplan2" style="width: 30%; hight: 30%;">
+      <p>Als u naar more options gaat zal u plans zien staan, hierop moet u klikken.</p>
+      <img src="Grondplan3.jpg" alt="Grondplan3" style="width: 30%; hight: 30%">
+      <p>Onder het deel plans zullen we naar roomplan gaan in plaats van floorplan.</p>
+      <img src="Roomplan1.jpg" alt="Roomplan1" style="width: 20%; hight: 20%;">
+      <p>U kan zien dat er al een plan stta genaamd: “hidden devices” dit is voor de verborgen apparaten, dit plan toont alle verborgen apparaten.</p>
+      <img src="Roomplan2.jpg" alt="Roomplan2" style="width: 40%; hight: 40%;">
+      <p>Om een nieuwe kamer toe te voegen moet u op add plan drukken.</p>
+      <img src="Roomplan3.jpg" alt="Roomplan3" style="width: 30%; hight: 30%;">
+      <p>U krijgt dan volgende pop-up. Bij name moet u de naam van de kamer invullen. Als u dot heeft gedaan moet u op add drukken.</p>
+      <img src="Roomplan4.jpg" alt="Roomplan4" style="width: 30%; hight: 30%;">
+      <p>Dan gaat de kamer in de lijst staan met kamers.</p>
+      <img src="Roomplan5.jpg" alt="Roomplan5" style="width: 40%; hight: 40%;">
+      <p>Om de kamers aan het plan toe te voegen moet u terug naar floorplan gaan.</p>
+      <img src="Roomplan6.jpg" alt="Roomplan6" style="width: 30%; hight: 30%;">
+      <p>Eerst moet je op het grondplan drukken zodat je het plan krijgt.</p>
+      <img src="Roomplan7.jpg" alt="Roomplan7" style="width: 30%; hight: 30%;">
+      <p>Nu kan u de kamers toevoegen. Hiervoor moet je de kamer selecteren benden en op add duwen.</p>
+      <img src="Roomplan8.jpg" alt="Roomplan8" style="width: 30%; hight: 30%;">
+      <p>Als u dan op de naam van de kamer klikt dan kan u de randen van de kamer op het plan aantonen.</p>
+      <img src="Roomplan9.jpg" alt="Roomplan9" style="width: 30%; hight: 30%;">
+      <p>Om een lamp op uw plan te zien moet u eerst de lamp in de kamer configureren. U doet dit door naar roomplan te gaan. Als u op de naam van de kamer drukt zal u beneden een kader zien verschijnen.</p>
+      <img src="DK1.jpg" alt="Device Kamer1" style="width: 30%; hight: 30%;">
+      <p>U moet op add drukken om de lamp te kunnen kiezen.</p>
+      <img src="DK2.jpg" alt="Device Kamer2" style="width: 30%; hight: 30%;">
+      <p>Dan krijgt u een lijst met al uw geconfigureerde aparaten. U kan nu het aparaat uit de lijst kiezen. Druk op add om het toe te voegen aan een kamer.</p>
+      <img src="DK3.jpg" alt="Device Kamer3" style="width: 30%; hight: 30%;">
+      <p>Om het aparaat op de kaart te zien moet u naar floorplan gaan. U kan zien als u de kamer aanduid dat er een lamp in de hoek staat. Dit is de lamp dat we juist in de kamer hebben gezet. Voor de positie te veranderen kan u de lamp verslepen naar de gewenste positie.</p>
+      <img src="DK4.jpg" alt="Device Kamer4" style="width: 30%; hight: 30%;">
+      <p>Nu zal ik tonen hoe je scenes gebruikt. We gaan een realistisch voorbeeld gebruiken. Als de deurbel gaat dan gaan alle lampen aan en na 10 seconden gaan deze weer uit. Daarvoor gaan we naar het tablad scenes.</p>
+      <img src="Scene1.jpg" alt="Scene1" style="width: 30%; hight: 30%;">
+      <p>Dan moet u op add scene klikken.</p>
+      <img src="Scene2.jpg" alt="Scene2" style="width: 30%; hight: 30%;">
+      <p>U krijgt dan volgende pop-up:</p>
+      <img src="Scene3.jpg" alt="Scene3" style="width: 30%; hight: 30%;">
+      <p>De naam kan u zelf kiezen. Let er wel op dat het type op scene staat. Het type kan ook op groep staan, dit is om groepen lampen te maken. Dit is handig als je grote groepen wilt schakelen met verschillende scenes want dan moet je niet iedere lamp appart aanvinken. Dan moet u op add scene drukken voor de scene toe te voegen.</p>
+      <img src="Scene4.jpg" alt="Scene4" style="width: 30%; hight: 30%;">
+      <p>U kan nu uw scene zien staan.</p>
+      <img src="Scene5.jpg" alt="Scene5" style="width: 30%; hight: 30%;">
+      <p>Om de scene aan te passen moet u op edit drukken.</p>
+      <img src="Scene7.jpg" alt="Scene7" style="width: 40%; hight: 40%;">
+      <p>Vanonder kan u de activatie en de aparaten kiezen. De activatie apparaten zijn bv: de bel in ons voorbeeld. De andere devices zijn de apparaten dat iets moeten doen, bij ons zijn dit de lichten. Er is 1 nadeel want je kan geen virtueel aparaat als activition device gebruiken. Dit wil zeggen dat we zelf de scene moeten starten.</p>
+      <img src="Scene7.jpg" alt="Scene7" style="width: 40%; hight: 40%;">
+      <p>Om onze lampen toe te voegen gaan we naar het kader helemaal beneden.</p>
+      <img src="Scene8.jpg" alt="Scene8" style="width: 40%; hight: 40%;">
+      <p>Naast device kietst u het aparaat. Command is om te zeggen wat het aparaat moet doen. Bij ons voorbeeld is dit aan want we willen dat de lampen aan gaan. On delay is de tijd dat het duurt tussen het aangaan van de scene en het aangaan van de lamp. Of delay is de tijd dat het duurt tussen het uitgaan van de scene en het uitgaan van de lamp. In ons voorbeeld laten we alle lampen 10 seconden branden dus moet er een of delay van 10 op iedere lamp.</p>
+      <img src="Scene9.jpg" alt="Scene9" style="width: 30%; hight: 30%;">
      </section>
      <section id="news">
       <h1 class="Titel2">News</h1>
