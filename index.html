@@ -1,16 +1,18 @@
-<!doctype html>
- <html lang="nl-NL">
+<!DOCTYPE html>
+ <html lang="nl-BE">  <!--taal is in het nederlands voor de comments-->
   <head>
    <title>Website Siebe</title>
-   <link rel="stylesheet" style="text/css" href="stylesheet.css">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta name="description" content="Ik geef op deze website meer uitleg over Domoticz en hoe je dit moet gebruiken. Hier kan u ook uitleg vinden over hoe je domoticz moet klaarzetten.">
-   <script src="https://kit.fontawesome.com/6b5af3c12e.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="stylesheet.css" style="text/css">						<!-- Stylesheet voor de styling -->
+   <link href="https://fonts.googleapis.com/css2?family=Recursive&display=swap" rel="stylesheet">		<!-- Font voor de navbar -->
+   <link rel="icon" href="icoon.png" type="image/icon type">							<!-- Voor icoontje naast titel -->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">					<!-- Scaling voor de Foto's, navbar,... -->	
+   <meta name="description" content="Ik geef op deze website meer uitleg over Domoticz en hoe je dit moet gebruiken. Hier kan u ook uitleg vinden over hoe je domoticz moet klaarzetten.">	<!-- Descriptie voor als ik de website ooit op google publish -->
+   <script src="https://kit.fontawesome.com/6b5af3c12e.js" crossorigin="anonymous"></script>			<!-- Fontawesome voor navbar icoontje -->
   </head>
   <body>
-   <h1 class="Titel">Website Siebe</h1>
-   <div class="topnav" id="myTopnav">
-    <a class="active" href="#home">Home</a>
+   <div class="topnav">
+    <a href="#home"><img src="icoon.png" alt="Logo" style="width: 26px; hight: 26px;"></a>
+    <a id="Titel">Website siebe</a>
     <a href="#eindwerk">Eindwerk</a>
     <a href="#handleiding">Handleiding Domoticz</a>
     <a href="#news">News</a>
@@ -18,28 +20,23 @@
     <a href="javascript:void(0);" class="icon" onclick="fasFa()">
      <i class="fas fa-bars"></i>
     </a>
-    </div>
-    <div class="sections">
-     <section id="home">
-      <h1 class="Titel">Home</h1>
-      <h2 id="work">Er wordt aan deze website gewerkt.</h2>
+   </div>
+   <div class="sections">
+    <section id="home">
+     <!-- <h2 style="color: red; text-align: center;">Er wordt momenteel aan deze website gewerkt</h2> -->
+     <h2 class="Titel">Welkom</h3>
+     <p>Deze website is gemaakt om mijn eindwerken te uploaden.</p>
+    </section>
+    <section id="eindwerk">
+      <h1 class="Titel">Eindwerk</h1>
+      <h2 class="Tussentitel">We moeten dit jaar een eindwerk maken. de opdracht is als volgt:</h2> 
+      <p>Maak een domotica systeem met het door de leerkracht gegeven domotica platform. Stel alles in zodat je een stabiel platform krijgt leg uit via foto’s of filmpjes hoe je dat doet.<br>
+       Zorg ervoor dat je via een drukknop 1 lamp aan en met de zelfde drukknop de lamp terug uit kan zetten.<br>
+       Kijk ook om een lamp te dimmen met 1 drukknop.<br>
+       Kijk om ook een sfeer te creëren b.v. sfeer TV kijken dan dimt de lamp vanzelf tot 30% dan schakelt de tv in en gaan de rolluiken naar beneden met 1 bediening.<br>
+       Kijk of je systeem ook kan werken met google home. (er is een google home beschikbaar).</p>
       <br>
-      <div class="container">
-       <div class="bar"></div>
-      </div>
-      <br>
-      <p>Welkom op mijn website ik ben Siebe ik zit in het 5e TSO Elektrische installatietechnieken. Deze website heb ik gemaakt om mijn eindwerk uit te leggen op een speciale manier. Voor meer info over mijn eindwerk kan u naar het deel “Eindwerk” gaan.</p>
-     </section>
-     <section id="eindwerk">
-      <h1 class="Titel2">Eindwerk</h1>
-      <h2 class="tussentitel2">We moeten dit jaar een eindwerk maken. de opdracht is als volgt:</h2> 
-      <p>Maak een domotica systeem met het door de leerkracht gegeven domotica platform. Stel alles in zodat je een stabiel platform krijgt leg uit via foto’s of filmpjes hoe je dat doet.</p>
-      <p>Zorg ervoor dat je via een drukknop 1 lamp aan en met de zelfde drukknop de lamp terug uit kan zetten.</p>
-      <p>Kijk ook om een lamp te dimmen met 1 drukknop.</p>
-      <p>Kijk om ook een sfeer te creëren b.v. sfeer TV kijken dan dimt de lamp vanzelf tot 30% dan schakelt de tv in en gaan de rolluiken naar beneden met 1 bediening.</p>
-      <p>Kijk of je systeem ook kan werken met google home. (er is een google home beschikbaar).</p>
-      <br>
-      <h2 class="tussentitel2">Opdracht:</h2>
+      <h2 class="Tussentitel">Opdracht:</h2>
       <ul>
        <li>Maak een stabiel platform waarop je de opdracht kan maken.</li>
        <li>Maak een bestelbon op met de prijs en foto’s erbij van welke componenten die je nodig hebt om dit pro-ject te realiseren.</li>
@@ -50,7 +47,6 @@
       </ul>
       <br>
       <p>Ik moet deze opdracht met domoticz maken. Dit is een open source domotica systeem. Domoticz werkt met een server. Dit wil zeggen dat je een apparaat nodig hebt dat altijd aanligt. Hiervoor heb ik een raspberry pi van school gekregen.</p>
-      <a href="http://192.168.1.31:8080/#/Dashboard" target="_blank">Link Eindwerk server</a>
       <p>De prijs:</p>
       <ul>
        <li>1. Raspberry pi 3B: 37,95 euro</li>
@@ -59,61 +55,61 @@
      </ul>
      <p>Dit komt uit op 69.93 euro in totaal.</p>
      <p>Dit zijn de prijzen van SOS Solutions.</p>
-     </section>
-     <section id="handleiding">
+    </section>
+    <section id="handleiding">
       <h1 class="Titel">Handleiding Domoticz</h1>
       <p>Hieronder staat een handleiding over hoe je domoticz moet klaarzetten en gebruiken.</p>
-      <br>
-      <h2 class="tussentitel">Benodigdheden:</h2>
+      <h2 class="Tussentitel">Benodigdheden:</h2>
       <ul>
        <li>Een raspberry pi</li>
        <li>Een PC of laptop</li>
        <li>Een SD kaart</li>
        <li>Een voeding voor je raspberry pi</li>
       </ul>
-      <h3 style="color: blue;">Raspberry pi?</h3>
-      <img src="Raspberrypi.jpg" alt="raspberrypi" style="width: 20%; hight: 20%; float:right;">
+      <h3 class="Rood">Raspberry pi?</h3>
+      <img src="foto's/Raspberrypi.jpg" alt="raspberrypi" style="width: 20%; hight: 20%; float:right;">
       <p>Voor domoticz kan je elke versie van de raspberry pi gebruiken, ik zou aanraden om een pi 3 of 4 te gebruiken omdat deze sneller zijn dan hun voorlopers.</p>
-      <h2 class="tussentitel">1.Hoe klaarzetten?</h2>
+      <h2 class="Tussentitel">1.Hoe klaarzetten?</h2>
       <p>Voordat je kan starten met je lampen,… te configureren zal je een Domoticz server moeten maken. Niet panikeren want Domoticz maakt de server voor jou. Daarvoor heeft u de raspberry pi voor, deze zal als server gebruikt worden. U kan dit ook met een PC of een server zelf doen maar een raspberry pi neemt niet zoveel plaats in.</p>
       <ol>
        <li><a href="#OS download" style="color: black; text-decoration: none;">OS Download</a></li>
        <li><a href="#Connecteren" style="color: black; text-decoration: none;">Hoe connecteren?</a></li>
+       <li><a href="#Domoticz" style="color: black; text-decoration: none;">Domoticz installeren</a></li>
       </ol>
-      <h3 style="color: blue;" id="OS download">Hoe OS downloaden?</h3>
+      <h3 class="Rood" id="OS download">Hoe OS downloaden?</h3>
       <p>Je zal moeten je OS (Operating System) op de SD kaart zetten want de raspberry pi heeft geen intern geheugen dit wil zeggen dat hij alles zal opslaan op de SD kaart. Ik zal dit doen via <a href="https://www.raspberrypi.org/downloads/" target="_blank">Raspberry pi imager</a>, je kan dit ook met een flasher als <a href="https://www.balena.io/etcher/" target="_blank">balena etcher</a> doen maar hierbij moet je eerst zelf de <a href="https://www.raspberrypi.org/downloads/" target="_blank">OS downloaden</a> en dan flashen naar de SD kaart.<p>
       <p>Als je de Raspberry Pi imager app opent krijg je volgend scherm:</p>
-      <img src="Raspberrypiimager1.jpg" alt="Raspberrypiimager1" style="width: 30%; hight: 30%;">
+      <img src="foto's/Raspberrypiimager1.jpg" alt="Raspberrypiimager1" style="width: 30%; hight: 30%;">
       <p>Voor de OS te kiezen moet u op CHOOSE OS duwen.</p>
-      <img src="OS1.jpg" alt="OS kiezer1" style="width: 30%; hight: 30%;">
+      <img src="foto's/OS1.jpg" alt="OS kiezer1" style="width: 30%; hight: 30%;">
       <p>U krijgt dan een pop-up met alle opties. U kan zien dat er 2 Raspberry pi opties zijn en dan heeft u ook nog LibreElec en Ubuntu, wij gaan Raspberry Pi OS kiezen.</p>
-      <img src="OS2.jpg" alt="OS kiezer2" style="width: 30%; hight: 30%;">
+      <img src="foto's/OS2.jpg" alt="OS kiezer2" style="width: 30%; hight: 30%;">
       <p>De eerste versie is de gewone 32-bit versie van raspberry pi, vroeger heette dit Raspbian. Bij deze versie staat recomended omdat dit de meest voorkomende versie is want deze heeft alles dat je nodig hebt.</p>
-      <img src="OS3.jpg" alt="OS kiezer3" style="width: 30%; hight: 30%;">
+      <img src="foto's/OS3.jpg" alt="OS kiezer3" style="width: 30%; hight: 30%;">
       <p>Bij raspberry Pi OS (other) zal u de lite en de full versie vinden.</p>
-      <img src="OS4.jpg" alt="OS kiezer4" style="width: 30%; hight: 30%;">
+      <img src="foto's/OS4.jpg" alt="OS kiezer4" style="width: 30%; hight: 30%;">
       </br>
-      <img src="OS5.jpg" alt="OS kiezer5" style="width: 30%; hight: 30%;">
+      <img src="foto's/OS5.jpg" alt="OS kiezer5" style="width: 30%; hight: 30%;">
       <p>De lite versie heeft geen scherm functie, dit wil zeggen dat als je een scherm aan de HDMI-poort(en) zal hangen dat dit niet zal werken (dit is wel bij full en gewone versie). Bij de lite versie is er ook geen GUI (Graphical User Interface of grafische gebruikersomgeving) dit wil zeggen dat je alles via de command line naar de pi zal moeten sturen. De full versie heeft de gewone versie maar met extra software voor te programmeren. Ik zal de standaard versie gebruiken omdat ik de pi dan aan een tv/scherm kan hangen als er iets niet klopt en ik heb de extra applicaties niet nodig (stel dat u deze later nodig heeft kan u ze nog steeds installeren).</p>
       </br>
       <p>Als u uw software heeft gekozen hoeft u enkel nog uw SD kaart te kiezen en op Write te klikken.</p>
-      <img src="OS6.jpg" alt="OS kiezer6" style="width: 30%; hight: 30%">
+      <img src="foto's/OS6.jpg" alt="OS kiezer6" style="width: 30%; hight: 30%">
       <p>Na een goede 25 minuten is het gedaan, u zal het volgende op uw scherm zien.</p>
-      <img src="OS7.jpg" alt="OS kiezer6" style="width: 30%; hight: 30%">
-      <h3 style="color: blue;" id="Connecteren">2.Hoe connecteren?</h3>
+      <img src="foto's/OS7.jpg" alt="OS kiezer6" style="width: 30%; hight: 30%">
+      <h2 class="Tussentitel" id="Connecteren">2.Hoe connecteren?</h3>
       <p>Omdat ik de raspberry pi headless (zonder scherm, muis,…) zal gebruiken zal ik moeten ermee kunnen connecteren. Wilt u de pi wel gebruiken met een scherm? <a href="#Screen">Hier</a> leg ik uit hoe u dit moet doen. Ik zal eerst connecteren via SSH (Secure Shell), dan kan ik VNC inschakelen. Met VNC zie je alles wat je op je scherm zou zien op je laptop, je kan dan de raspberry pi gebruiken zonder dat je erbij moet zitten.</p>
       <p>Voordat je SSH kan gebruiken heeft je pi internetverbinding nodig. U kan de pi via kabel verbinden, hierbij moet u enkel uw kabel in uw router, accespoint,… Steken. Als u de pi met wifi wil verbinden kan u uitleg hieronder vinden. Als u de pi met kabel verbind kan u dit gewoon <a href="#SSH">overslaan.</a></p>
       <p>Voor u de SD kaart kan uithalen moet u uw wifi nog instellen. Hiervoor zal u de naam en het paswoord van uw internet weten. Het wachtwoord kan je op de router vinden, moest u geen toegang hebben tot uw router kan u alsnog het paswoord weten. Ik zal enkel uitleggen hoe u dit op Windows moet doen, er zijn natuurlijk ook manieren om dit te zien op linux en macOS. Als u uw wachtwoord weet kan u <a href="#SSH">hier</a> door naar het volgende deel.</p>
       <p>Ik zal zo uitgebreid mogelijk uitleggen hoe u uw wifi paswoord kan zien. Het eerste dat u moet doen is CMD of opdrachtprompt openen.</p>
-      <img src="CMD1.jpg" alt="CMD1" style="width: 30%; hight: 30%;">
+      <img src="foto's/CMD1.jpg" alt="CMD1" style="width: 30%; hight: 30%;">
       <p>Dan moet u ‘netsh wlan show profiles’ typen. Dit geeft alle wifi netwerken dat je computer kent weer. De netsh command is voor te zeggen tegen de computer wat je wilt, hier is dit dus in de categorie internet. Netsh is de network shell dus we zitten in de categorie internet. Wlan staat voor wireless local area network of draadloos lokaal netwerk. Dit is om duidelijk e maken aan de pc dat hij iets met zijn wlan zal moeten doen. Show profiles is toon profielen, hierbij kan u alle internetnamen zien.</p>
-      <img src="CMD2.jpg" alt="CMD2" style="width: 50%; hight: 50%;">
+      <img src="foto's/CMD2.jpg" alt="CMD2" style="width: 50%; hight: 50%;">
       <p>U kan zien dat er maar 3 netwerken opkomen bij mij. Ik weet zeker dat het niet Campus Tant ten MSKA Personeel is omdat dit netwerken van op school zijn. Proximus-Home-8810 daartegen is het netwerk van bij mij thuis.</p>
       <p>Nu het leuke deel. Het paswoord is zeer gemakkelijk te vinden, u moet enkel netsh wlan show profiles “uw internet naam” key=clear. Dit is dezelfde command als daarjuist met key=clear en uw internet naam erbij. Wat dit zal doen is de key of sleutel tonen. Deze key is het paswoord van het internet. U hoeft enkel achter de key te zoeken.</p>
-      <img src="CMD3.JPG" alt="CMD3" style="width: 30%; hight: 30%;">
+      <img src="foto's/CMD3.JPG" alt="CMD3" style="width: 30%; hight: 30%;">
       <p>Voor wat heeft u uw paswoord van uw wifi nu nodig? We gaan een wpa supplicant maken. Dit document zegt tegen de pi wat de naam en het paswoord van uw internet is.</p>
       <p>Het document zal er uit zien als volgende: bij country moet u de 2-delige ISO 3166-1 land code geven. Dit toont aan in welk land u woont. <a href="https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes" target="_blank">Hier</a> kan u een tabel vinden moest u niet in België wonen.</p>
-      <img src="WPA1.jpg" alt="WPA1" style="width: 30%; hight: 30%;">
+      <img src="foto's/WPA1.jpg" alt="WPA1" style="width: 30%; hight: 30%;">
       <p>Hieronder staat de tekst zodat u deze kan kopiëren. Let er wel op dat u uw wifi naam, paswoord en landcode moet aanpassen.</p>
       <pre>
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
@@ -125,83 +121,84 @@ ssid="&lt;Naam wifi&gt;"
 psk="&lt;paswoord wifi&gt;"
 }</pre>
       <p>Dit document moet u opslaan als wpa_supplicant.conf let wel op dat u het document opslaat onder alle bestanden en niet als tekstdocument.</p>
-      <img src="WPA2.jpg" alt="wpa2" style="width: 30%; hight: 30%;">
+      <img src="foto's/WPA2.jpg" alt="wpa2" style="width: 30%; hight: 30%;">
       <p id="SSH">Bij Raspbian is SSH standaard uit omdat dit een manier is van hackers om uw pi over te nemen. Het is heel simpel om SSH aan te leggen, je moet gewoon een leeg kladblok document genaamd ssh op je SD kaart zetten.</p>
-      <img src="SSH1.jpg" alt="SSH1" style="width: 30%; hight: 30%;">
+      <img src="foto's/SSH1.jpg" alt="SSH1" style="width: 30%; hight: 30%;">
       <p>Nu kan u de SD kaart uit uw pc halen en in de Raspberry pi steken. Als u de pi in de voeding steekt zal u zien dat hij opstart. In het begin zal u enkel het rode lampje zien branden, het groene zal dan beginnen pinken. Het groene lampje toont aan dat de pi de SD kaart aan het lezen is, dit is ook een teken dat de pi kan schrijven op de SD kaart.</p>
       <p>Nadat de pi is opgestart kan u deze zoeken in uw internet. De gemakkelijkste manier is om de ping command te gebruiken (windows bij macOS en linux zal dit anders zijn). Ping is uw pc dat in uw netwerk zoekt achter het IP-adres of de naam dat u ingeeft. U kan ook naar uw router instellingen gaan en de pi zo zoeken. Als u ping raspberrypi.local typt in cmd dan zou u normaal moeten een antwoord krijgen.</p>
-      <img src="ping1.jpg" alt="ping1" style="width: 40%; hight: 40%;">
+      <img src="foto's/ping1.jpg" alt="ping1" style="width: 40%; hight: 40%;">
       <p>U kan zien dat ik een antwoord krijg van 169.254.121.83. Dit is het IP-adres van de pi. Moest ping raspberrypi.local niet werken kan u ping raspberrypi gebruiken, let wel op want als uw buur of iemand in uw straat dan een pi heeft dat deze ook in de lijst zal staan.</p>
       <p>Nu dat we het IP-adres weten kunnen we connecteren via SSH. Hiervoor hebben we een app nodig dat SSH verbindingen kan maken. Ik zal <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html" target="_blank">putty</a> gebruiken omdat dit de meest aangeraden app is.</p>
       <p>Het enige dat u moet doen is het IP-adres in putty ingeven en op open drukken. Let er wel op dat de optie op SSH staat.</p>
-      <img src="Putty1.jpg" alt="putty1" style="width: 30%; hight: 30%">
+      <img src="foto's/Putty1.jpg" alt="putty1" style="width: 30%; hight: 30%">
       <p>Het IP-adres moet u in de balk vanboven ingeven, port staat standaard op 22. Dit kan u laten op 22 staan.</p>
-      <img src="Putty2.jpg" alt="putty2" style="width: 30%; hight: 30%;">
+      <img src="foto's/Putty2.jpg" alt="putty2" style="width: 30%; hight: 30%;">
       <p>Als u nu op open drukt zal putty verbinding maken met de pi.</p>
-      <img src="Putty3.jpg" alt="putty3" style="width: 30%; hight: 30%;">
+      <img src="foto's/Putty3.jpg" alt="putty3" style="width: 30%; hight: 30%;">
       <p>De eerste keer dat u verbind met de pi zal u een pop-up hebben van putty met een security alert. Dit is omdat de pi een verse OS heeft en de key niet juist is. Putty vraagt of hij deze mag veranderen. U hoeft gewoon op ja te duwen en dan kan u doorgaan. Maar als dit nog eens gebeuren zonder dat u dit heeft veranderd wil dit zeggen dat uw pi gehackt is.</p>
-      <img src="Putty4.jpg" alt="putty4" style="width: 30%; hight: 30%;">
+      <img src="foto's/Putty4.jpg" alt="putty4" style="width: 30%; hight: 30%;">
       <p>Als u connectie maakt met putty zal hij “login as:” tonen. De standaard user is pi. Dan moet u enter duwen.</p>
-      <img src="Putty5.jpg" alt="putty5" style="width: 30%; hight: 30%">
+      <img src="foto's/Putty5.jpg" alt="putty5" style="width: 30%; hight: 30%">
       <p>Putty vraagt nu het paswoord. Het standaard paswoord is “raspberry”.</p>
-      <img src="Putty6.jpg" alt="putty6" style="width: 30%; hight: 30%">
+      <img src="foto's/Putty6.jpg" alt="putty6" style="width: 30%; hight: 30%">
       <p>Nu hebben we connectie met de pi. We zullen nu kijken voor het beeld van de pi te kunnen zien. Dit zullen we doen via VNC. Dit zal u eerst moeten aanleggen op de pi. Hiervoor zal u <a href="https://www.realvnc.com/en/connect/download/viewer/" target="_blank">VNC viewer</a> nodig hebben, dit is om de pi te kunnen zien. Je hebt ook VNC server, dit is voor het apparaat dat overgenomen moet worden.</p>
       <p>De eerste stap dat we gaan doen is naar de instellingen gaan van de pi. We doen dit door sudo raspi-config te typen. Sudo staat voor als root dus als administrator, dit geeft u speciale functies dat u niet kan zonder sudo.</p>
-      <img src="Putty7.jpg" alt="putty7" style="width: 30%; hight: 30%;">
+      <img src="foto's/Putty7.jpg" alt="putty7" style="width: 30%; hight: 30%;">
       <p>U zal dan volgend scherm krijgen:</p>
-      <img src="Putty8.jpg" alt="putty8" style="width: 30%; hight: 30%;">
+      <img src="foto's/Putty8.jpg" alt="putty8" style="width: 30%; hight: 30%;">
       <p>Voor VNC aan te leggen zullen we naar interfacing options gaan. Dit zijn alle verbindingstechnieken.</p>
-      <img src="Putty9.jpg" alt="putty9" style="width: 30%; hight: 30%;">
+      <img src="foto's/Putty9.jpg" alt="putty9" style="width: 30%; hight: 30%;">
       <p>Hierin gaan we op VNC duwen. VNC is een grafische verbinding.</p>
-      <img src="Putty10.jpg" alt="putty10" style="width: 30%; hight: 30%;">
+      <img src="foto's/Putty10.jpg" alt="putty10" style="width: 30%; hight: 30%;">
       <p>Als de pi vraagt of u VNC wilt inschakelen moet u op yes duwen anders zal hij dit niet aanleggen.</p>
-      <img src="Putty11.jpg" alt="putty11" style="width: 30%; hight: 30%">
+      <img src="foto's/Putty11.jpg" alt="putty11" style="width: 30%; hight: 30%">
       <p>Als alles goed is gegaan krijgt u volgend scherm:</p>
-      <img src="Putty12.jpg" alt="putty12" style="width: 30%; hight: 30%">
+      <img src="foto's/Putty12.jpg" alt="putty12" style="width: 30%; hight: 30%">
       <p>Om de interfacing options weg te krijgen moet u rechts vanonder naar finish gaan.</p>
-      <img src="Putty13.jpg" alt="putty13" style="width: 30%; hight: 30%">
+      <img src="foto's/Putty13.jpg" alt="putty13" style="width: 30%; hight: 30%">
       <p>Het volgende dat u moet doen is naar VNC viewer gaan. Om met de pi te kunnen connecteren moet u in de balk vanboven de pi zijn IP-adres ingeven.</p>
-      <img src="VNC1.jpg" alt="Vnc1" src="VNC1" style="width: 30%; hight: 30%;">
+      <img src="foto's/VNC1.jpg" alt="Vnc1" src="VNC1" style="width: 30%; hight: 30%;">
       <p>Als dit de eerste keer is dat u via VNC connecteert met de pi zal u volgend bericht krijgen. U moet op continue duwen en dan kan u door naar de volgende stap.</p>
-      <img src="VNC2.jpg" alt="VNC2" style="width: 30%; hight: 30%;">
+      <img src="foto's/VNC2.jpg" alt="VNC2" style="width: 30%; hight: 30%;">
       <p>Nu worden de username en paswoord gevraagd. Omdat we dit nog niet hebben veranderd is dit nog steeds “pi” met paswoord “raspberry”.</p>
-      <img src="VNC3.jpg" alt="VNC3" style="width: 30%; hight: 30%;">
+      <img src="foto's/VNC3.jpg" alt="VNC3" style="width: 30%; hight: 30%;">
       <p id="Screen">De eerste keer dat u de pi opstart krijgt u volgend scherm. Dit is om de pi in te stellen aan uw voorkeuren.</p>
-      <img src="Pi1.jpg" alt="Pi1" style="width: 30%; hight: 30%;">
+      <img src="foto's/Pi1.jpg" alt="Pi1" style="width: 30%; hight: 30%;">
       <p>Het eerste dat u zal moeten instellen is uw land, taal en tijdzone. Als u uw land kiest past de pi direct de taal en tijdzone aan.</p>
-      <img src="Pi2.jpg" alt="Pi2" style="width: 30%; hight: 30%;">
+      <img src="foto's/Pi2.jpg" alt="Pi2" style="width: 30%; hight: 30%;">
       <p>Het volgende dat u moet instellen is het wachtwoord voor de pi. Dit zal ook het wachtwoord worden voor Putty en VNC als u de pi headless gebruikt.</p>
-      <img src="Pi3.jpg" alt="Pi3" style="width: 30%; hight: 30%;">
+      <img src="foto's/Pi3.jpg" alt="Pi3" style="width: 30%; hight: 30%;">
       <p>Dan moet u uw scherm configureren. Als u geen zwarte boord ziet rond u scherm kan u op next duwen. Heeft u wel een zwarte boord dan is het best dat u eerst het vakje aankruist voor u op next drukt.</p>
-      <img src="Pi4.jpg" alt="Pi4" style="width: 30%; hight: 30%;">
+      <img src="foto's/Pi4.jpg" alt="Pi4" style="width: 30%; hight: 30%;">
       <p>Hierna vraagt de pi om te verbinden met een draadloos netwerk. Als u niet met wifi wilt verbinden kan u op skip duwen. Wilt u echter wel met een netwerk verbinden kies dan de naam van het netwerk en druk op next.</p>
-      <img src="Pi5.jpg" alt="Pi5" style="width: 30%; hight: 30%;">
+      <img src="foto's/Pi5.jpg" alt="Pi5" style="width: 30%; hight: 30%;">
       <p>Het volgende is de pi updaten. U kan kiezen om dit over te slaan maar het is aangeraden dat u dit doet. Als de pi klaar is met updaten zal hij opnieuw opstarten.</p>
-      <img src="Pi6.jpg" alt="Pi6" style="width: 30%; hight: 30%">
+      <img src="foto's/Pi6.jpg" alt="Pi6" style="width: 30%; hight: 30%">
+      <h2 class="Rood" id="Domoticz">3.Domoticz installeren</h2>
       <p>Domoticz downloaden kan op 2 manieren. Ik zal de gemakkelijkste manier uitleggen, de andere manier staat uitgelegd in <a href="https://www.domoticz.com/wiki/Build_Domoticz_from_source" target=_blank">deze</a> wiki.</p>
       <p>De manier waarop ik het zal doen is in de terminal  “curl -L https://install.domoticz.com | bash” te typen.</p>
       <p>Stap 1: open de terminal. Het pictogram is een zwart kotje met een blauwe balk vanboven met &gt;_ erop.</p>
-      <img src="Pi7.jpg" alt="Pi7" style="width: 30%; hight: 30%;">
+      <img src="foto's/Pi7.jpg" alt="Pi7" style="width: 30%; hight: 30%;">
       <p>Stap2: typ curl -L https://install.domoticz.com | bash in de terminal. Hierdoor weet de pi dat hij domoticz moet instaleren.</p>
       <img src="Pi8.jpg" alt="Pi8" style="width: 30%; hight: 30%;">
       <p>Als alles goed gaat krijgt u volgend scherm.</p>
-      <img src="Pi9.jpg" alt="Pi9" style="width: 30%; hight: 30%;">
+      <img src="foto's/Pi9.jpg" alt="Pi9" style="width: 30%; hight: 30%;">
       <p>Als u goed oplet ziet u dat er staat dat je een statisch IP-adres nodig hebt. Dit wil zeggen dat je IP-adres niet vanzelf kan veranderen. Dit ga ik later uitleggen hoe je dit moet doen.</p>
-      <img src="Pi10.jpg" alt="Pi10" style="width: 30%; hight: 30%;">
+      <img src="foto's/Pi10.jpg" alt="Pi10" style="width: 30%; hight: 30%;">
       <p>De pi vraagt welke services je wilt gebruiken. Je kan kiezen tussen http en https. http is de gewone browser en https is de safe browser. Er is geen verschil tussen beiden op zicht maar de 2e is veiliger.</p>
-      <img src="Pi11.jpg" alt="Pi11" style="width: 30%; hight: 30%;">
+      <img src="foto's/Pi11.jpg" alt="Pi11" style="width: 30%; hight: 30%;">
       <p>Dan kan u kiezen welke poort u wilt gebruiken voor http en https. Het is best dat u dit op de standaardwaarde laat staan.</p>
-      <img src="PN1.jpg" alt="PN1" style="width: 30%; hight: 30%;">
-      <img src="PN2.jpg" alt="PN2" style="width: 30%; hight: 30%;">
+      <img src="foto's/PN1.jpg" alt="PN1" style="width: 30%; hight: 30%;">
+      <img src="foto's/PN2.jpg" alt="PN2" style="width: 30%; hight: 30%;">
       <p>Dan kan u kiezen in welke folder u domoticz wilt instaleren.</p>
-      <img src="Domoticz1.jpg" alt="Domoticz1" style="width: 30%; hight: 30%;">
+      <img src="foto's/Domoticz1.jpg" alt="Domoticz1" style="width: 30%; hight: 30%;">
       <p>Wanneer domoticz klaar is met installeren krijgt u een scherm met 2 adressen op. Dit zijn de adressen dat u in uw browser moet typen om uw server te bereiken.</p>
-      <img src="Domoticz2.jpg" alt="Domoticz2" style="width: 30%; hight: 30%;">
+      <img src="foto's/Domoticz2.jpg" alt="Domoticz2" style="width: 30%; hight: 30%;">
       <p>Als we nu naar deze adressen willen gaan kan u zien op de http kan u op uw server maar op https werkt niet. Dit is omdat u eerst een SSL certificaat moet geven aan uw domoticz server. Ik zal niet uitleggen hoe u dit moet doen omdat ik geen SSL certificaat heb. Wilt u wel een https server hebben dan staat op <a href="https://www.domoticz.com/wiki/Native_secure_access_with_Lets_Encrypt" target="_blank">deze</a> pagina meer uitleg hierover.</p>
-      <img src="Domoticz3.jpg" alt="Domoticz3" style="width: 30%; hight: 30%;">
+      <img src="foto's/Domoticz3.jpg" alt="Domoticz3" style="width: 30%; hight: 30%;">
       <p>Vooraleer we doorgaan zal ik uitleggen hoe je een statisch IP-adres aan u pi moet geven.</p>
       <p>De eerste stap is een backup van uw huidig netwerk maken. We doen dit door:” sudo cp /etc/dhcpcd.conf /etc/dhcpcd.conf.backup” in de terminal te typen.</p>
-      <img src="SIP1.jpg" alt="Statisch IP1" style="width: 30%; hight: 30%">
+      <img src="foto's/SIP1.jpg" alt="Statisch IP1" style="width: 30%; hight: 30%">
       <p>Dan gaan we het bestand dat uw IP opslaat veranderen. We doen dit door “sudo nano /etc/dhcpcd.conf” in de terminal te typen.</p>
       <p>Je krijgt dan een hele lijst. U zal vanonder moeten</p>
       <pre>
@@ -212,148 +209,148 @@ interface eth0
       </pre>
       <p>bijtypen.</p>
       <p>Naast interface ziet u eth0 staan, u moet dit aanpassen aan het soort internet dat u gebruikt. Als u de pi met kabel hebt verbonden moet u eth0 typen, maar als u de pi met wifi verbind moet u wlan0 typen.</p>
-      <img src="SIP2.jpg" alt="StaticIP2" style="width: 30%; hight: 30%;">
+      <img src="foto's/SIP2.jpg" alt="StaticIP2" style="width: 30%; hight: 30%;">
       <p>Het statisch IP-adres kan u zelf kiezen. Daarachter moet u / met het subnet mask van je netwerk typen. Is uw subnet mask 255.255.255.0 dan moet u /24 invullen. Is uw subnet mask ruimer bv: 255.255.0.0 gebruik dan /16 en voor 255.0.0.0 moet u /8 gebruiken.</p>
       <p>Het subnet mask kan u vinden in cmd (bij windows macOS en linux zullen anders zijn). Het eerste dat u moet doen is cmd of opdrachtprompt openen, dan moet u ipconfig typen.</p>
-      <img src="SIP3.jpg" alt="StaticIP3" style="width: 30%; hight: 30%;">
+      <img src="foto's/SIP3.jpg" alt="StaticIP3" style="width: 30%; hight: 30%;">
        <p>U kan uw subnet mask onder subnet mask vinden. U moet cmd nog niet sluiten want we gaan dit later nog nodig hebben.</p>
-      <img src="SIP4.jpg" alt="StaticIP4" style="width: 30%; hight: 30%;">
+      <img src="foto's/SIP4.jpg" alt="StaticIP4" style="width: 30%; hight: 30%;">
       <p>Naast static routers moet u het IP-adres van uw router intypen. Dit is de Default Gateway. Dit staat onder uw subnet mask in cmd.</p>
-      <img src="SIP5.JPG" alt="StaticIP5" style="width: 30%; hight: 30%;">
+      <img src="foto's/SIP5.JPG" alt="StaticIP5" style="width: 30%; hight: 30%;">
       <p>U kan zien dat ik 2 adressen krijg. Ik ga 192.168.1.1 gebruiken omdat dit simpeler is.</p>
       <p>Bij static domain_name_servers kan u 8.8.8.8 laten staan u kan dit adres ook aanpassen naar de DNS server van je provider, 8.8.8.8 is de gratis DNS server van Google.</p>
       <p>Dan slaan we het bestand op, we doen dit met ctrl x, dan moet u kiezen tussen ja en nee. We willen het opslaan dus we typen j. en dan drukt u op enter om het op te slaan.</p>
       <p>De wijzigingen zijn nog niet actief tot je de pi heropstart. Je kan dit via de terminal doen of via het menu. Via de terminal moet u “sudo reboot -h 0” typen.</p>
-      <img src="Reboot1.jpg" alt="Reboot1" style="width: 30%; hight: 30%;">
+      <img src="foto's/Reboot1.jpg" alt="Reboot1" style="width: 30%; hight: 30%;">
       <p>Om het menu te openen moet u op het besje links vanboven klikken.</p>
-      <img src="Reboot2.jpg" alt="Reboot2" style="width: 30%; hight: 30%;">
+      <img src="foto's/Reboot2.jpg" alt="Reboot2" style="width: 30%; hight: 30%;">
       <p>Helemaal vanonder zal u een optie Schutdown zien staan. Als u hierop klikt kan u kiezen voor opnieuw op te starten.</p>
-      <img src="Reboot3.jpg" alt="Reboot3" style="width: 30%; hight: 30%">
+      <img src="foto's/Reboot3.jpg" alt="Reboot3" style="width: 30%; hight: 30%">
       <p>Dan moet u op reboot duwen voor de pi te laten heropstarten.</p>
-      <img src="Reboot4.jpg" alt="Reboot4" style="width: 30%; hight: 30%;">
+      <img src="foto's/Reboot4.jpg" alt="Reboot4" style="width: 30%; hight: 30%;">
       <p>Doordat mijn leerkrachten momenteel niet kunnen zien of de lampen wel degelijk aan gaan of niet zal ik alles via virtuele lampen en sensoren doen.</p>
       <p>Het eerste dat je moet doen is de hardware configureren voor de virtuele sensoren, schakelaar,… hiervoor moet u naar setup gaan.</p>
-      <img src="Setup1.jpg" alt="Setup1" style="width: 35%; hight: 35%;">
+      <img src="foto's/Setup1.jpg" alt="Setup1" style="width: 35%; hight: 35%;">
       <p>Hieronder ziet u een deel genaamd hardware. Hier zal u alle hardware van uw lampen,… moeten configureren.</p>
-      <img src="Setup2.jpg" alt="Setup2" style="width: 35%; hight: 35%;">
+      <img src="foto's/Setup2.jpg" alt="Setup2" style="width: 35%; hight: 35%;">
       <p>Dan vullen we de naam in dat we willen gebruiken. Dit is niet zo belangrijk, je kan geen foute naam kiezen. Ik zal dit virtueel noemen omdat we dit voor de virtuele sensoren zullen gebruiken.</p>
-      <img src="Setup3.jpg" alt="Setup3" style="width: 40%; hight: 40%;">
+      <img src="foto's/Setup3.jpg" alt="Setup3" style="width: 40%; hight: 40%;">
       <p>Bij type is het niet gelijk wat je neemt. Voor virtuele sensoren hebben we Dummy nodig. Heeft u een ander apparaat zoek dan zeker op welk type je nodig hebt.</p>
-      <img src="Setup4.jpg" alt="Setup4" style="width: 40%; hight: 40%;">
+      <img src="foto's/Setup4.jpg" alt="Setup4" style="width: 40%; hight: 40%;">
       <p>Data Timeout zal ik uit laten, want voor mijn toepassing is het niet nodig dat de hardware heropstart als die geen data meer krijgt. Want de dummy is puur voor de virtuele sensoren te kunnen configureren.</p>
-      <img src="Setup5.jpg" alt="Setup5" style="width: 40%; hight: 40%;">
+      <img src="foto's/Setup5.jpg" alt="Setup5" style="width: 40%; hight: 40%;">
       <p>Dan moet u vanonder op add duwen voor de hardware in het systeem te zetten.</p>
-      <img src="Setup6.jpg" alt="Setup6" style="width: 40%; hight: 40%;">
+      <img src="foto's/Setup6.jpg" alt="Setup6" style="width: 40%; hight: 40%;">
       <p>Voor wat hebben we de harware nu nodig? Dat zal ik nu tonen. Ik ga tonen hoe je een simpele virtuele drukknop moet configureren.</p>
       <p>Eerst gaan we naar switches moeten gaan. Op dit blad zal je alle shakelaars en sensoren zien dat je hebt geconfigureerd, hier kan u ook nieuwe schakelaars,lampen,… configureren.</p>
-      <img src="Lamp1.jpg" alt="Lamp1" style="width: 40%; hight: 40%;">
+      <img src="foto's/Lamp1.jpg" alt="Lamp1" style="width: 40%; hight: 40%;">
       <p>U kan zien dat er 2 opties zijn: Manuel light/switch en learn light/switch. Als u een smart lamp, schakelaar,… hebt dat werkt met domoticz kan u op learn drukken, domoticz zal dan automatisch zoeken achter uw schakelaar, lamp. Wilt u alles zelf configureren dan kan u op manuel drukken.</p>
-      <img src="Lamp2.jpg" alt="Lamp2" style="width: 40%; hight: 40%;">
+      <img src="foto's/Lamp2.jpg" alt="Lamp2" style="width: 40%; hight: 40%;">
       <p>Als u op manueel drukt zal u volgende pop-up krijgen</p>
-      <img src="Lamp3.jpg" alt="Lamp3" style="width: 30%; hight: 30%">
+      <img src="foto's/Lamp3.jpg" alt="Lamp3" style="width: 30%; hight: 30%">
       <p>U kan zien dat de hardware al automatisch op Virtueel staat, dit is omdat we nog geen andere hardware hebben staan.</p>
-      <img src="Lamp4.jpg" alt="Lamp4" style="width: 30%; hight: 30%;>
+      <img src="foto's/Lamp4.jpg" alt="Lamp4" style="width: 30%; hight: 30%;>
       <p>Net zoals bij hardware doet de naam dat je het apparaat geeft niets, dit is de naam dat u op uw scherm zal zien staan bij de schakelaar.</p>
-      <img src="Lamp5.jpg" alt="Lamp5" style="width: 30%; hight: 30%;">
+      <img src="foto's/Lamp5.jpg" alt="Lamp5" style="width: 30%; hight: 30%;">
       <p>Switch type is om te kiezen welke type schakelaar het is. Ik laat dit momenteel nog op aan uit omdat er geen optie staat voor drukknop aan uit.</p>
-      <img src="Lamp6.jpg" alt="Lamp6" style="width: 30%; hight: 30%;">
+      <img src="foto's/Lamp6.jpg" alt="Lamp6" style="width: 30%; hight: 30%;">
       <p>Type House code en Unit code zijn niet belangrijk voor virtuele lampen. Het is belangrijk dat je de juiste instellingen neemt voor uw soort/merk lamp, schakelaar,… omdat deze anders niet zal werken.</p>
-      <img src="Lamp7.jpg" alt="Lamp7" style="width: 30%; hight: 30%;">
+      <img src="foto's/Lamp7.jpg" alt="Lamp7" style="width: 30%; hight: 30%;">
       <p>Voor te testen of de lamp goed is geconfigureerd kan u op test drukken.</p>
-      <img src="Lamp8.jpg" alt="Lamp8" style="width: 30%; hight: 30%;">
+      <img src="foto's/Lamp8.jpg" alt="Lamp8" style="width: 30%; hight: 30%;">
       <p>U kan ook kiezen of het apparaat een main device of een slave device is. U kan dit gebruiken om bv een wissel of kruisschakeling te maken met drukknoppen.</p>
-      <img src="Lamp9.jpg" alt="Lamp9" style="width: 30%; hight: 30%;">
+      <img src="foto's/Lamp9.jpg" alt="Lamp9" style="width: 30%; hight: 30%;">
       <p>Voor de schakelaar toe te voegen moet u enkel  op Add device drukken.</p>
-      <img src="Lamp10.jpg" alt="Lamp10" style="width: 30%; hight: 30%;">
+      <img src="foto's/Lamp10.jpg" alt="Lamp10" style="width: 30%; hight: 30%;">
       <p>Nu kan u zien dat deze lamp in de lijst staat.</p>
-      <img src="Lamp11.jpg" alt="Lamp11" style="width: 30%; hight: 30%;">
+      <img src="foto's/Lamp11.jpg" alt="Lamp11" style="width: 30%; hight: 30%;">
       <p>Als u naar dashboard gaat zal u zien dat het nog leeg is. </p>
-      <img src="Fav1.jpg" alt="Fav1" style="width: 30%; hight: 30%;">
+      <img src="foto's/Fav1.jpg" alt="Fav1" style="width: 30%; hight: 30%;">
       <p>Om de lamp aan het dashboard toe te voegen moet u op het sterretje links vanonder drukken. Dit maakt de lamp een favoriet, als u een heel huis hebt met lampen zal u hier alle veel gebruikte of belangrijke lampen plaatsen.</p>
-      <img src="Fav2.jpg" alt="fav2" style="width: 30%; hight: 30%;">
+      <img src="foto's/Fav2.jpg" alt="fav2" style="width: 30%; hight: 30%;">
       <p>U kan nu zien dat de lamp op het dashboard staat.</p>
-      <img src="Fav3.jpg" alt="Fav3" style="width: 30%; hight: 30%;">
+      <img src="foto's/Fav3.jpg" alt="Fav3" style="width: 30%; hight: 30%;">
       <p>Er is nog een manier om virtuele lampen toe te voegen. Als u naar hardware gaat kan u create virtual sensors kiezen.</p>
-      <img src="VS1.jpg" alt="Virtuele Sensor1" style="width: 40%; hight: 40%;">
+      <img src="foto's/VS1.jpg" alt="Virtuele Sensor1" style="width: 40%; hight: 40%;">
       <p>Dan krijgt u volgende pop-up:</p>
-      <img src="VS2.jpg" alt="Virtuele Sensor2" style="width: 30%; hight: 30%;">
+      <img src="foto's/VS2.jpg" alt="Virtuele Sensor2" style="width: 30%; hight: 30%;">
       <p>De naam kan u zelf kiezen. Sensor type is het type sensor, bv: RGB, Schakelaar,… U kan de lamp,.. toevoegen door op ok te duwen. Als u naar het deel switches gaat zal u uw schakelaar zien staan.</p>
-      <img src="VS3.jpg" alt="Virtuele Sensor3" style="width: 30%; hight: 30%;">
+      <img src="foto's/VS3.jpg" alt="Virtuele Sensor3" style="width: 30%; hight: 30%;">
       <p>Voor we doorgaan zal ik tonen hoe je een grondplan in domoticz zet. Vooraleer we beginnen zal je een grondplan nodig hebben. Ik heb volgende gekozen omdat dit niet te groot en niet te klein is voor mijn eindwerk.</p>
-      <img src="Grondplan1.jpg" alt="Grondplan1" style="width: 30%; hight: 30%;">
+      <img src="foto's/Grondplan1.jpg" alt="Grondplan1" style="width: 30%; hight: 30%;">
       <p>Dan moet u naar setup gaan.</p>
-      <img src="Grondplan2.jpg" alt="Grondplan2" style="width: 30%; hight: 30%;">
+      <img src="foto's/Grondplan2.jpg" alt="Grondplan2" style="width: 30%; hight: 30%;">
       <p>Als u naar het deel more options gaat dan zal u plans zien staan.</p>
-      <img src="Grondplan3.jpg" alt="Grondplan3" style="width: 30%; hight: 30%">
+      <img src="foto's/Grondplan3.jpg" alt="Grondplan3" style="width: 30%; hight: 30%">
       </br>
-      <img src="Grondplan4.jpg" alt="Grondplan4" style="width: 20%; hight: 20%">
+      <img src="foto's/Grondplan4.jpg" alt="Grondplan4" style="width: 20%; hight: 20%">
       <p>Als u op plans drukt kan u 3 opties zien staan:  Roomplan, Floorplan en timerplan. Roomplan is voor iedere kamer appart in te delen, Floorplan is voor iedere vloer van het huis bv gelijkvloers, 2e verdiep, kalder,… timerplan is voor al u timers op een plan te zetten. Wij zullen eerst een vloerplan toevoegen en dan zal ik iedere kamer indelen, het timerplan zal ik momenteel nog niet nodig hebben.</p>
-      <img src="Grondplan5.jpg" alt="Grondplan5" style="width: 20%; hight: 20%">
+      <img src="foto's/Grondplan5.jpg" alt="Grondplan5" style="width: 20%; hight: 20%">
       <p>Voor het plan toe te voegen moet u op add drukken.</p>
-      <img src="Grondplan6.jpg" alt="Grondplan6" style="width: 30%; hight: 30%;">
+      <img src="foto's/Grondplan6.jpg" alt="Grondplan6" style="width: 30%; hight: 30%;">
       <p>U zal dan volgende pop-up krijgen:</p>
-      <img src="Grondplan7.jpg" alt="Grondplan7" style="width: 30%; hight: 30%;">
+      <img src="foto's/Grondplan7.jpg" alt="Grondplan7" style="width: 30%; hight: 30%;">
       <p>De naam van het grondplan is de naam dat u wilt dat naast het grondplan staat op uw scherm, app.</p>
-      <img src="Grondplan8.jpg" alt="Grondplan8" style="width: 30%; hight: 30%;">
+      <img src="foto's/Grondplan8.jpg" alt="Grondplan8" style="width: 30%; hight: 30%;">
       <p>Icon scale is om de schaal van de iconen te veranderen, ik zal dit op 1.0 laten. Moesten de iconen te groot zijn tegenover uw plan kan u dat hier veranderen.</p>
-      <img src="Grondplan9.jpg" alt="Grondplan9" style="width: 30%; hight: 30%;">
+      <img src="foto's/Grondplan9.jpg" alt="Grondplan9" style="width: 30%; hight: 30%;">
       <p>Om het plan toe te voegen moet u op bestand kiezen duwen.</p>
-      <img src="Grondplan10.jpg" alt="Grondplan10" style="width: 30%; hight: 30%">
+      <img src="foto's/Grondplan10.jpg" alt="Grondplan10" style="width: 30%; hight: 30%;">
       <p>Om het definitief te maken moet u op add drukken.</p>
-      <img src="Grondplan11.jpg" alt="Grondplan11" style="width: 30%; hight: 30%">
+      <img src="foto's/Grondplan11.jpg" alt="Grondplan11" style="width: 30%; hight: 30%;">
       <p>U kan nu zien dat het grondplan is toegevoegd aan de lijst.</p>
-      <img src="Grondplan12.jpg" alt="Grondplan12" style="width: 30%; hight: 30%">
+      <img src="foto's/Grondplan12.jpg" alt="Grondplan12" style="width: 30%; hight: 30%;">
       <p>Een roomplan toevoegen is even simpel. Voor te beginnen moet u naar setup gaan.</p>
-      <img src="Grondplan2.jpg" alt="Grondplan2" style="width: 30%; hight: 30%;">
+      <img src="foto's/Grondplan2.jpg" alt="Grondplan2" style="width: 30%; hight: 30%;">
       <p>Als u naar more options gaat zal u plans zien staan, hierop moet u klikken.</p>
-      <img src="Grondplan3.jpg" alt="Grondplan3" style="width: 30%; hight: 30%">
+      <img src="foto's/Grondplan3.jpg" alt="Grondplan3" style="width: 30%; hight: 30%">
       <p>Onder het deel plans zullen we naar roomplan gaan in plaats van floorplan.</p>
-      <img src="Roomplan1.jpg" alt="Roomplan1" style="width: 20%; hight: 20%;">
+      <img src="foto's/Roomplan1.jpg" alt="Roomplan1" style="width: 20%; hight: 20%;">
       <p>U kan zien dat er al een plan stta genaamd: “hidden devices” dit is voor de verborgen apparaten, dit plan toont alle verborgen apparaten.</p>
-      <img src="Roomplan2.jpg" alt="Roomplan2" style="width: 40%; hight: 40%;">
+      <img src="foto's/Roomplan2.jpg" alt="Roomplan2" style="width: 40%; hight: 40%;">
       <p>Om een nieuwe kamer toe te voegen moet u op add plan drukken.</p>
-      <img src="Roomplan3.jpg" alt="Roomplan3" style="width: 30%; hight: 30%;">
+      <img src="foto's/Roomplan3.jpg" alt="Roomplan3" style="width: 30%; hight: 30%;">
       <p>U krijgt dan volgende pop-up. Bij name moet u de naam van de kamer invullen. Als u dot heeft gedaan moet u op add drukken.</p>
-      <img src="Roomplan4.jpg" alt="Roomplan4" style="width: 30%; hight: 30%;">
+      <img src="foto's/Roomplan4.jpg" alt="Roomplan4" style="width: 30%; hight: 30%;">
       <p>Dan gaat de kamer in de lijst staan met kamers.</p>
-      <img src="Roomplan5.jpg" alt="Roomplan5" style="width: 40%; hight: 40%;">
+      <img src="foto's/Roomplan5.jpg" alt="Roomplan5" style="width: 40%; hight: 40%;">
       <p>Om de kamers aan het plan toe te voegen moet u terug naar floorplan gaan.</p>
-      <img src="Roomplan6.jpg" alt="Roomplan6" style="width: 30%; hight: 30%;">
+      <img src="foto's/Roomplan6.jpg" alt="Roomplan6" style="width: 30%; hight: 30%;">
       <p>Eerst moet je op het grondplan drukken zodat je het plan krijgt.</p>
-      <img src="Roomplan7.jpg" alt="Roomplan7" style="width: 30%; hight: 30%;">
+      <img src="foto's/Roomplan7.jpg" alt="Roomplan7" style="width: 30%; hight: 30%;">
       <p>Nu kan u de kamers toevoegen. Hiervoor moet je de kamer selecteren benden en op add duwen.</p>
-      <img src="Roomplan8.jpg" alt="Roomplan8" style="width: 30%; hight: 30%;">
+      <img src="foto's/Roomplan8.jpg" alt="Roomplan8" style="width: 30%; hight: 30%;">
       <p>Als u dan op de naam van de kamer klikt dan kan u de randen van de kamer op het plan aantonen.</p>
-      <img src="Roomplan9.jpg" alt="Roomplan9" style="width: 30%; hight: 30%;">
+      <img src="foto's/Roomplan9.jpg" alt="Roomplan9" style="width: 30%; hight: 30%;">
       <p>Om een lamp op uw plan te zien moet u eerst de lamp in de kamer configureren. U doet dit door naar roomplan te gaan. Als u op de naam van de kamer drukt zal u beneden een kader zien verschijnen.</p>
-      <img src="DK1.jpg" alt="Device Kamer1" style="width: 30%; hight: 30%;">
+      <img src="foto's/DK1.jpg" alt="Device Kamer1" style="width: 30%; hight: 30%;">
       <p>U moet op add drukken om de lamp te kunnen kiezen.</p>
-      <img src="DK2.jpg" alt="Device Kamer2" style="width: 30%; hight: 30%;">
+      <img src="foto's/DK2.jpg" alt="Device Kamer2" style="width: 30%; hight: 30%;">
       <p>Dan krijgt u een lijst met al uw geconfigureerde aparaten. U kan nu het aparaat uit de lijst kiezen. Druk op add om het toe te voegen aan een kamer.</p>
-      <img src="DK3.jpg" alt="Device Kamer3" style="width: 30%; hight: 30%;">
+      <img src="foto's/DK3.jpg" alt="Device Kamer3" style="width: 30%; hight: 30%;">
       <p>Om het aparaat op de kaart te zien moet u naar floorplan gaan. U kan zien als u de kamer aanduid dat er een lamp in de hoek staat. Dit is de lamp dat we juist in de kamer hebben gezet. Voor de positie te veranderen kan u de lamp verslepen naar de gewenste positie.</p>
-      <img src="DK4.jpg" alt="Device Kamer4" style="width: 30%; hight: 30%;">
+      <img src="foto's/DK4.jpg" alt="Device Kamer4" style="width: 30%; hight: 30%;">
       <p>Nu zal ik tonen hoe je scenes gebruikt. We gaan een realistisch voorbeeld gebruiken. Als de deurbel gaat dan gaan alle lampen aan en na 10 seconden gaan deze weer uit. Daarvoor gaan we naar het tablad scenes.</p>
-      <img src="Scene1.jpg" alt="Scene1" style="width: 30%; hight: 30%;">
+      <img src="foto's/Scene1.jpg" alt="Scene1" style="width: 30%; hight: 30%;">
       <p>Dan moet u op add scene klikken.</p>
-      <img src="Scene2.jpg" alt="Scene2" style="width: 30%; hight: 30%;">
+      <img src="foto's/Scene2.jpg" alt="Scene2" style="width: 30%; hight: 30%;">
       <p>U krijgt dan volgende pop-up:</p>
-      <img src="Scene3.jpg" alt="Scene3" style="width: 30%; hight: 30%;">
+      <img src="foto's/Scene3.jpg" alt="Scene3" style="width: 30%; hight: 30%;">
       <p>De naam kan u zelf kiezen. Let er wel op dat het type op scene staat. Het type kan ook op groep staan, dit is om groepen lampen te maken. Dit is handig als je grote groepen wilt schakelen met verschillende scenes want dan moet je niet iedere lamp appart aanvinken. Dan moet u op add scene drukken voor de scene toe te voegen.</p>
-      <img src="Scene4.jpg" alt="Scene4" style="width: 30%; hight: 30%;">
+      <img src="foto's/Scene4.jpg" alt="Scene4" style="width: 30%; hight: 30%;">
       <p>U kan nu uw scene zien staan.</p>
-      <img src="Scene5.jpg" alt="Scene5" style="width: 30%; hight: 30%;">
+      <img src="foto's/Scene5.jpg" alt="Scene5" style="width: 30%; hight: 30%;">
       <p>Om de scene aan te passen moet u op edit drukken.</p>
-      <img src="Scene7.jpg" alt="Scene7" style="width: 40%; hight: 40%;">
+      <img src="foto's/Scene7.jpg" alt="Scene7" style="width: 40%; hight: 40%;">
       <p>Vanonder kan u de activatie en de aparaten kiezen. De activatie apparaten zijn bv: de bel in ons voorbeeld. De andere devices zijn de apparaten dat iets moeten doen, bij ons zijn dit de lichten. Er is 1 nadeel want je kan geen virtueel aparaat als activition device gebruiken. Dit wil zeggen dat we zelf de scene moeten starten.</p>
-      <img src="Scene7.jpg" alt="Scene7" style="width: 40%; hight: 40%;">
+      <img src="foto's/Scene7.jpg" alt="Scene7" style="width: 40%; hight: 40%;">
       <p>Om onze lampen toe te voegen gaan we naar het kader helemaal beneden.</p>
-      <img src="Scene8.jpg" alt="Scene8" style="width: 40%; hight: 40%;">
+      <img src="foto's/Scene8.jpg" alt="Scene8" style="width: 40%; hight: 40%;">
       <p>Naast device kietst u het aparaat. Command is om te zeggen wat het aparaat moet doen. Bij ons voorbeeld is dit aan want we willen dat de lampen aan gaan. On delay is de tijd dat het duurt tussen het aangaan van de scene en het aangaan van de lamp. Of delay is de tijd dat het duurt tussen het uitgaan van de scene en het uitgaan van de lamp. In ons voorbeeld laten we alle lampen 10 seconden branden dus moet er een of delay van 10 op iedere lamp.</p>
-      <img src="Scene9.jpg" alt="Scene9" style="width: 30%; hight: 30%;">
+      <img src="foto's/Scene9.jpg" alt="Scene9" style="width: 30%; hight: 30%;">
      </section>
      <section id="news">
-      <h1 class="Titel2">News</h1>
+      <h1 class="Titel">News</h1>
      </section>
      <section id="contact">
       <h1 class="Titel">Contact</h1>
@@ -362,6 +359,6 @@ interface eth0
      </section>
     </div>
     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-    <script src="Website.js"></script>
-   </body>
-  </html>
+    <script src="website.js"></script>
+  </body>
+ </html>
