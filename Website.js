@@ -13,7 +13,7 @@ var sticky = navbar.offsetTop;
 // Geef de navbar de sticky class wanneer je de scrollpositie berijkt, a verwijder de "sticky" wanner je de scrollpositie verlaat
 function myFuntion()
 	{
-		if (window.pageYOffset >= sticky)
+		if (window.pageYoffset >= sticky)
 			{
 				navbar.classList.add("sticky")
 			}
