@@ -1,7 +1,7 @@
 // Wanneer de gebruiker scrolt, start myFunction
-window.onscroll = function()
+window.onscroll = Function()
 {
-	myFunction()
+	Function()
 };
 
 // Krijg de navbar
