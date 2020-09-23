@@ -1,7 +1,7 @@
 // Wanneer de gebruiker scrolt, start myFunction
-window.onscroll = Function()
+window.onscroll = function()
 {
-	Function()
+	myFunction()
 };
 
 // Krijg de navbar
@@ -11,7 +11,7 @@ var navbar = document.getElementById("navbar");
 var sticky = navbar.offsetTop;
 
 // Geef de navbar de sticky class wanneer je de scrollpositie berijkt, a verwijder de "sticky" wanner je de scrollpositie verlaat
-function myFuntion()
+function myFunction()
 	{
 		if (window.pageYoffset >= sticky)
 			{
