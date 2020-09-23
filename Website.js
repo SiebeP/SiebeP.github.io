@@ -5,7 +5,7 @@ window.onscroll = function()
 };
 
 // Krijg de navbar
-var navbar = document.getElementById("navbar");
+var navbar = document.getElementById("topnav");
 
 // Krijg de offset positie  van de navbar
 var sticky = navbar.offsetTop;
