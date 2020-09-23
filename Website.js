@@ -27,7 +27,7 @@ function myFunction()
 //fas-Fa-bars
 function fasFa()
 {
- 	var x = document.getElementById("navbar");
+ 	var x = document.getElementById("topnav");
 	if (x.className === "navbar")
 		{
 			x.className += " responsive";
