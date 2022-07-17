@@ -1,28 +1,5 @@
-// Wanneer de gebruiker scrolt, start myFunction
-window.onscroll = function()
-{
-	myFunction()
-};
-
-// Krijg de navbar
-var navbar = document.getElementById("topnav");
-
-// Krijg de offset positie  van de navbar
-var sticky = navbar.offsetTop;
-
-// Geef de navbar de sticky class wanneer je de scrollpositie berijkt, a verwijder de "sticky" wanner je de scrollpositie verlaat
-function myFunction()
-	{
-		if (window.pageYoffset >= sticky)
-			{
-				navbar.classList.add("sticky")
-			}
-		else
-			{
-				navbar.classList.remove("sticky")
-			}
-	}
-
+myButton = document.getElementById("myBtn");
+var navbar = document.getElementsByName("navbar");
 
 //fas-Fa-bars
 function fasFa()
@@ -38,3 +15,26 @@ function fasFa()
   	}
 }
 
+//To top knop
+const showOnPx = 100;
+const backToTopButton = document.querySelector(".back-to-top")
+
+const scrollContainer = () => {
+	return document.documentElement || document.body;
+};
+
+document.addEventListener("scroll", () => {
+	if (scrollContainer().scrollTop > showOnPx) {
+		backToTopButton.classList.remove("hidden")
+	} else {
+		backToTopButton.classList.add("hidden")
+	}
+})
+
+const goToTop = () => {
+	document.body.scrollIntoView({
+		behavior: "smooth",
+	});
+};
+
+backToTopButton.addEventListener("click", goToTop)
